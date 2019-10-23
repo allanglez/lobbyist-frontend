@@ -4592,10 +4592,9 @@ label {
 .node-type-campground-directory-record .campground-service p {
   margin-left: 20px;
 }
-
-.node-type-campground-directory-record .campground-map-upload {
+/* .node-type-campground-directory-record .campground-map-upload {
   word-break: break-word;
-}
+} */
 
 .node-type-campground-directory-record .campground-services {
   margin-top: 20px;
