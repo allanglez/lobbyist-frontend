@@ -11031,7 +11031,7 @@ nav#global-nav header {
 }
 
 */
-*/
+
 body {
   font-size: 16px;
 }
@@ -11047,7 +11047,7 @@ body {
 }
 
 .field--name-body.field--type-text-with-summary {
-  margin-bottom: 3em
+  margin-bottom: 3em;
 }
 
 .field--name-body {
@@ -11061,7 +11061,7 @@ body {
 
 .field--name-body .h3,
 .field--name-body h3 {
-  padding-top: 20px
+  padding-top: 20px;
 }
 
 .page-header {
@@ -11071,29 +11071,29 @@ body {
 .field--label {
   font-weight: 500 !important;
   margin-top: 1.5rem;
-  color: #323232
+  color: #323232;
 }
 
 .field--label a,
 .field--label a:focus,
 .field--label a:visited {
   text-decoration: none;
-  color: #323232
+  color: #323232;
 }
 
 .field--label a:focus:hover,
 .field--label a:hover,
 .field--label a:visited:hover {
   text-decoration: underline;
-  color: #323232
+  color: #323232;
 }
 
 .field--label a {
-  margin-bottom: 0 !important
+  margin-bottom: 0 !important;
 }
 
 .field .field--items {
-  margin-top: 1.5rem
+  margin-top: 1.5rem;
 }
 
 .field--name-body .btn-primary,
@@ -11102,7 +11102,7 @@ body {
 .field--name-body .more-link a:visited,
 .more-link .field--name-body a,
 .more-link .field--name-body a:visited {
-  padding: 15px 30px
+  padding: 15px 30px;
 }
 
 .visuallyhidden {
@@ -11113,7 +11113,7 @@ body {
   height: 1px;
   margin: -1px;
   padding: 0;
-  border: 0
+  border: 0;
 }
 
 .primary-items .field--item.even .primary-single-item.box-items:before,
@@ -11125,7 +11125,7 @@ body {
   display: block;
   width: 75%;
   height: 20px;
-  content: ''
+  content: '';
 }
 
 .primary-items .field--item.even .primary-single-item.box-items .faded-box:after,
@@ -11140,7 +11140,7 @@ body {
   height: 10px;
   margin: 0 auto;
   content: '';
-  background: #0097a9
+  background: #0097a9;
 }
 
 .footer-menu-wrapper .footer-menu .region-footer nav {
