@@ -25,6 +25,7 @@
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
+        "drupal/twig_tweak": "^2.4",
         "drupalwxt/wxt": "2.2.19",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
