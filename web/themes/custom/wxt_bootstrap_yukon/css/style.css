@@ -4594,7 +4594,7 @@ label {
 }
 
 .node-type-campground-directory-record .campground-map-upload {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .node-type-campground-directory-record .campground-services {
