@@ -25,6 +25,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/twig_tweak": "^2.4",
+        "drupalwxt/wxt_bootstrap": "dev-8.x-2.x",
         "drupalwxt/wxt_library": "dev-3045272-library-path",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
