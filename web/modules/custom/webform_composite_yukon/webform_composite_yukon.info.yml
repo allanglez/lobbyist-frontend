@@ -1,0 +1,11 @@
+name: 'Webform Composite Yukon'
+description: 'Webform Composites Yukon'
+core: 8.x
+package: Yukon
+type: module
+dependencies:
+  - 'webform:webform'
+# Information added by Drupal.org packaging script on 2019-01-25
+version: '8.1'
+core: '8.x'
+project: 'webform_composite_yukon'
