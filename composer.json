@@ -3,8 +3,7 @@
     "description": "Install drops-8 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
-    "repositories": [
-        {
+    "repositories": [{
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
@@ -13,7 +12,7 @@
             "url": "https://asset-packagist.org"
         },
         {
-            "type" : "composer",
+            "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
         }
     ],
@@ -52,7 +51,7 @@
         "symfony/css-selector": "^2.8"
     },
     "conflict": {
-            "drupal/drupal": "*"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -96,7 +95,19 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"],
+            "web/modules/contrib/drupal/wxt_library": [
+                "drupal/wxt_library"
+            ],
+            "web/profiles/drupal/wxt_library": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/drupal/wxt_library": [
+                "drupal/wxt_bootstrap"
+            ],
+            "drush/contrib/drupal/wxt_library": [
+                "type:drupal-drush"
+            ]
         },
         "build-env": {
             "install-cms": [
