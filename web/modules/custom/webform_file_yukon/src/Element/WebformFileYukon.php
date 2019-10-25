@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Provides an example that shows how to create a Webform composite/
+ */
+
 namespace Drupal\webform_file_yukon\Element;
 
 use Drupal\Core\Form\FormStateInterface;
@@ -24,8 +28,7 @@ use Drupal\file\Element\ManagedFile;
  * @see https://api.drupal.org/api/drupal/namespace/Drupal%21Core%21Render%21Element
  * @see \Drupal\webform_example_element\Element\WebformExampleElement
  */
-class WebformFileYukon extends ManagedFile
-{
+class WebformFileYukon extends ManagedFile {
   /**
    * The types of files that the server accepts.
    *
@@ -33,13 +36,12 @@ class WebformFileYukon extends ManagedFile
    *
    * @see http://www.w3schools.com/tags/att_input_accept.asp
    */
-  protected static $accept;
+  protected static $_accept;
 
   /**
    * {@inheritdoc}
    */
-  public function getInfo()
-  {
+  public function getInfo() {
     $info = parent::getInfo();
     $info['#pre_render'][] = [get_class($this), 'preRenderWebformFileYukon'];
     $info['#process'][] = [get_class($this), 'processWebformFileYukon'];
@@ -50,22 +52,25 @@ class WebformFileYukon extends ManagedFile
    * Processes a 'webform_file_yukon' element.
    */
   public static function processWebformFileYukon(&$element, FormStateInterface
-                                                  $form_state, &$complete_form)
-  {
+     $form_state, &$complete_form
+  ) {
     // Here you can add and manipulate your element's properties and callbacks.
-    $element = ManagedFile::processManagedFile($element, $form_state,
-                                                                $complete_form);
+    $element = ManagedFile::processManagedFile(
+      $element, $form_state,
+      $complete_form
+    );
     return $element;
   }
 
   /**
    * Render API callback: Adds media capture to the managed_file element type.
    */
-  public static function preRenderWebformFileYukon($element)
-  {
+  public static function preRenderWebformFileYukon($element) {
     $element['#attributes']['type'] = 'file';
-    Element::setAttributes($element, ['id', 'name', 'value', 'size',
-                                                   'maxlength', 'placeholder']);
+    Element::setAttributes(
+      $element, ['id', 'name', 'value', 'size',
+        'maxlength', 'placeholder']
+    );
     static::setAttributes($element, ['form-text', 'webform-file-yukon']);
 
     // Set accept and capture attributes.

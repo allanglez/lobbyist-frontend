@@ -15,9 +15,10 @@ use Drupal\webform\Element\WebformActions
  *
  * @see \Drupal\Core\Render\Element\Actions
  */
-class WebformActionsYukon extends WebformActions {
+class WebformActionsYukon extends WebformActions
+{
 
-  public static $buttons = [
+    public static $buttons = [
     'submit',
     'reset',
     'draft',
@@ -25,33 +26,35 @@ class WebformActionsYukon extends WebformActions {
     'wizard_next',
     'preview_prev',
     'preview_next',
-  ];
+    ];
 
-  /**
-   * {@inheritdoc}
-   */
-  public function getInfo() {
-    $info = parent::getInfo();
-    return $info;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function getInfo()
+    {
+        $info = parent::getInfo();
+        return $info;
+    }
 
-  /**
-   * Processes a form actions container element.
-   *
-   * @param array $element
-   *   An associative array containing the properties and children of the
-   *   form actions container.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
-   * @param array $complete_form
-   *   The complete form structure.
-   *
-   * @return array
-   *   The processed element.
-   */
-  public static function processWebformActions(&$element, FormStateInterface $form_state, &$complete_form) {
-    $element = parent::processWebformActions(&$element, FormStateInterface $form_state, &$complete_form);
-    return $element;
-  }
+    /**
+     * Processes a form actions container element.
+     *
+     * @param array                                $element
+     *   An associative array containing the properties and children of the
+     *   form actions container.
+     * @param \Drupal\Core\Form\FormStateInterface $form_state
+     *   The current state of the form.
+     * @param array                                $complete_form
+     *   The complete form structure.
+     *
+     * @return array
+     *   The processed element.
+     */
+    public static function processWebformActions(&$element, FormStateInterface $form_state, &$complete_form)
+    {
+        $element = parent::processWebformActions(&$element, FormStateInterface $form_state, &$complete_form);
+        return $element;
+    }
 
 }

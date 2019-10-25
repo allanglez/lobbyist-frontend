@@ -42,8 +42,7 @@ class WebformFileYukon extends WebformManagedFileBase
    * {@inheritdoc}
    */
   public function prepare(array &$element, WebformSubmissionInterface
-                                                    $webform_submission = null)
-  {
+     $webform_submission = null) {
     parent::prepare($element, $webform_submission);
     // Get current value and original value for this element.
     $key = $element['#webform_key'];
@@ -57,7 +56,8 @@ class WebformFileYukon extends WebformManagedFileBase
     $value = isset($data[$key]) ? $data[$key] : [];
     $fids = (is_array($value)) ? $value : [$value];
     if (isset($data["_" . $key]) && empty($this->entityTypeManager->getStorage(
-                                                'file')->loadMultiple($fids))) {
+      'file'
+    )->loadMultiple($fids))) {
       $sub_data = $webform_submission->getData();
       if (is_array($data[$key])) {
         $fids = [];
@@ -110,8 +110,7 @@ class WebformFileYukon extends WebformManagedFileBase
    * {@inheritdoc}
    */
   protected function formatHtmlItem(array $element, WebformSubmissionInterface
-                                      $webform_submission, array $options = [])
-  {
+     $webform_submission, array $options = []) {
     $value = $this->getValue($element, $webform_submission, $options);
     $file = $this->getFile($element, $value, $options);
 
@@ -134,5 +133,4 @@ class WebformFileYukon extends WebformManagedFileBase
         ];
     }
   }
-
 }
