@@ -1,6 +1,7 @@
 .responses-table .form-group:nth-child(odd) {
   background-color: #eee;
 }
+
 .responses-table {
   margin-top: 32px;
   border-top: 3px solid #eee;
@@ -17,13 +18,14 @@
  * Webform example composite styles.
  */
 
-.webform_example_composite_multiple-table--first_name {}
+/* .webform_example_composite_multiple-table--first_name {
+}
 
-.webform_example_composite_multiple-table--last_name {}
+.webform_example_composite_multiple-table--last_name {
+}
 
-.webform_example_composite_multiple-table--date_of_birth {}
-
+.webform_example_composite_multiple-table--date_of_birth {
+} */
 .webform_example_composite_multiple-table--gender {
   min-width: 100px;
 }
-

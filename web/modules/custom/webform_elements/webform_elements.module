@@ -6,20 +6,18 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
-use Drupal\webform\WebformInterface;
-use Drupal\webform\Utility\WebformFormHelper;
-use Drupal\webform\Plugin\WebformElementManagerInterface;
-use Drupal\webform\Plugin\WebformElementInterface;
-use Drupal\webform\Plugin\WebformElement\WebformManagedFileBase;
-use Drupal\webform\Form\AdminConfig\WebformAdminConfigBaseForm;
 
-function webform_elements_form_webform_ui_element_type_select_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $not_display = array("webform_address", "webform_contact", "webform_link", "webform_location_places", "webform_name", "webform_telephone", "webform_custom_composite", "managed_file", "webform_audio_file", "webform_document_file", "webform_video_file",  "webform_image_file");
-  foreach($form as $key => $value){
-    foreach($not_display as $category => $type){
-      if(isset($value['elements']) &&  isset($value['elements'][$type]) ){
-        unset($form[$key]['elements'][$type]);
+function webform_elements_form_webform_ui_element_type_select_form_alter(&$form
+                                    , FormStateInterface $form_state, $form_id)
+{
+  $not_display = array("webform_address", "webform_contact", "webform_link",
+                "webform_location_places", "webform_name", "webform_telephone",
+              "webform_custom_composite", "managed_file", "webform_audio_file",
+           "webform_document_file", "webform_video_file", "webform_image_file");
+  foreach ($form as $key => $value) {
+    foreach ($not_display as $category => $type) {
+      if (isset($value['elements']) && isset($value['elements'][$type])) {
+        unset($form[$key]['elements'][$type]);
       }
     }
   }
