@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Provides an example that shows how to create a Webform composite.
+ */
+
+module_load_include('inc', 'webform', 'includes/webform.theme.template');
+
+/**
+ * Implements function.
+ */
+function webform_file_yukon_theme() {
+  return [
+    'webform_file_yukon' => [
+      'render element' => 'element',
+    ],
+  ];
+}
+
+/**
+ * @param $variables
+ */
+function template_preprocess_webform_file_yukon(array &$variables) {
+  template_preprocess_webform_element_managed_file($variables);
+}
