@@ -43,8 +43,7 @@
         "drupal/webform_rest": "2.x-dev",
         "drupal/restui": "^1.16",
         "drupal/http_client_manager": "^2.2",
-        "drupal/clientside_validation": "1.x-dev",
-        "lodash-php/lodash-php": "dev-master"
+        "drupal/clientside_validation": "1.x-dev"
     },
     "require-dev": {
         "behat/behat": "3.*",
