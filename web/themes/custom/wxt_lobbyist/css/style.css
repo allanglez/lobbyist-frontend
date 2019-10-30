@@ -10,12 +10,16 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/_variables.scss
  */
-.clearfix:before, .filter-wrapper:before, .clearfix:after, .filter-wrapper:after {
+.clearfix:before,
+.filter-wrapper:before,
+.clearfix:after,
+.filter-wrapper:after {
   display: table;
   content: " ";
 }
 
-.clearfix:after, .filter-wrapper:after {
+.clearfix:after,
+.filter-wrapper:after {
   clear: both;
 }
 
@@ -202,7 +206,8 @@ html.js .ajax-new-content:empty {
   border-left: 1px solid;
 }
 
-.file > .tabledrag-changed, .file > .tabledrag-changed:last-child {
+.file > .tabledrag-changed,
+.file > .tabledrag-changed:last-child {
   border: 1px solid #f7e1b5;
 }
 
@@ -220,7 +225,10 @@ html.js .ajax-new-content:empty {
   width: 100%;
 }
 
-.file-link a, .file-link a:hover, .file-link a:focus, .file-link a:active {
+.file-link a,
+.file-link a:hover,
+.file-link a:focus,
+.file-link a:active {
   color: inherit;
 }
 
@@ -447,11 +455,15 @@ body.navbar-is-fixed-bottom {
   padding: 10px 15px;
 }
 
-.panel-title, .panel-title:hover, .panel-title:focus, .panel-title:hover:focus {
+.panel-title,
+.panel-title:hover,
+.panel-title:focus,
+.panel-title:hover:focus {
   color: inherit;
 }
 
-.panel-title:focus, .panel-title:hover {
+.panel-title:focus,
+.panel-title:hover {
   text-decoration: none;
 }
 
@@ -503,7 +515,8 @@ body.navbar-is-fixed-bottom {
   padding: 10px;
 }
 
-.tabledrag-handle:hover, .tabledrag-handle:focus {
+.tabledrag-handle:hover,
+.tabledrag-handle:focus {
   color: #337ab7;
 }
 
@@ -527,11 +540,15 @@ body.navbar-is-fixed-bottom {
   margin-bottom: 20px;
 }
 
-.tabs-below > .nav-tabs, .tabs-left > .nav-tabs, .tabs-right > .nav-tabs {
+.tabs-below > .nav-tabs,
+.tabs-left > .nav-tabs,
+.tabs-right > .nav-tabs {
   border-bottom: 0;
 }
 
-.tabs-below > .nav-tabs .summary, .tabs-left > .nav-tabs .summary, .tabs-right > .nav-tabs .summary {
+.tabs-below > .nav-tabs .summary,
+.tabs-left > .nav-tabs .summary,
+.tabs-right > .nav-tabs .summary {
   color: #777777;
   font-size: 12px;
 }
@@ -557,14 +574,15 @@ body.navbar-is-fixed-bottom {
   border-radius: 0 0 4px 4px;
 }
 
-.tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
   border-top-color: #ddd;
   border-bottom-color: transparent;
 }
 
 .tabs-below > .nav-tabs > .active > a,
-  .tabs-below > .nav-tabs > .active > a:hover,
-  .tabs-below > .nav-tabs > .active > a:focus {
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
   border-color: transparent #ddd #ddd #ddd;
 }
 
@@ -575,23 +593,23 @@ body.navbar-is-fixed-bottom {
 }
 
 .tabs-left > .nav-tabs > li,
-  .tabs-right > .nav-tabs > li {
+.tabs-right > .nav-tabs > li {
   float: none;
 }
 
 .tabs-left > .nav-tabs > li:focus,
-    .tabs-right > .nav-tabs > li:focus {
+.tabs-right > .nav-tabs > li:focus {
   outline: 0;
 }
 
 .tabs-left > .nav-tabs > li > a,
-    .tabs-right > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > li > a {
   margin-right: 0;
   margin-bottom: 3px;
 }
 
 .tabs-left > .nav-tabs > li > a:focus,
-      .tabs-right > .nav-tabs > li > a:focus {
+.tabs-right > .nav-tabs > li > a:focus {
   outline: 0;
 }
 
@@ -613,13 +631,14 @@ body.navbar-is-fixed-bottom {
   border-radius: 4px 0 0 4px;
 }
 
-.tabs-left > .nav-tabs > li > a:hover, .tabs-left > .nav-tabs > li > a:focus {
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
   border-color: #eeeeee #ddd #eeeeee #eeeeee;
 }
 
 .tabs-left > .nav-tabs > .active > a,
-  .tabs-left > .nav-tabs > .active > a:hover,
-  .tabs-left > .nav-tabs > .active > a:focus {
+.tabs-left > .nav-tabs > .active > a:hover,
+.tabs-left > .nav-tabs > .active > a:focus {
   border-color: #ddd transparent #ddd #ddd;
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -633,14 +652,15 @@ body.navbar-is-fixed-bottom {
   border-radius: 0 4px 4px 0;
 }
 
-.tabs-right > .nav-tabs > li > a:hover, .tabs-right > .nav-tabs > li > a:focus {
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
   border-color: #eeeeee #eeeeee #eeeeee #ddd;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .tabs-right > .nav-tabs > .active > a,
-  .tabs-right > .nav-tabs > .active > a:hover,
-  .tabs-right > .nav-tabs > .active > a:focus {
+.tabs-right > .nav-tabs > .active > a:hover,
+.tabs-right > .nav-tabs > .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
 }
 
@@ -671,7 +691,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   padding-bottom: 40px;
 }
 
-body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray, body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray > .toolbar-lining:before {
+body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray,
+body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray > .toolbar-lining:before {
   width: 240px;
 }
 
@@ -718,7 +739,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   color: #262626;
 }
 
-.ui-autocomplete .ui-menu-item.ui-state-active, .ui-autocomplete .ui-menu-item.ui-state-focus {
+.ui-autocomplete .ui-menu-item.ui-state-active,
+.ui-autocomplete .ui-menu-item.ui-state-focus {
   background: #337ab7;
   color: #fff;
 }
@@ -727,7 +749,8 @@ ol, ul {
   padding-left: 1.5em;
 }
 
-.popover ol:last-child, .popover ul:last-child {
+.popover ol:last-child,
+.popover ul:last-child {
   margin-bottom: 0;
 }
 
@@ -739,7 +762,7 @@ ol, ul {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid #e5e5e5;
 }
 
 p:last-child,
@@ -758,14 +781,16 @@ p:last-child,
   overflow: hidden;
 }
 
-.help-block, .control-group .help-inline {
+.help-block,
+.control-group .help-inline {
   color: #777777;
   font-size: 12px;
   margin: 5px 0 10px;
   padding: 0;
 }
 
-.help-block:first-child, .control-group .help-inline:first-child {
+.help-block:first-child,
+.control-group .help-inline:first-child {
   margin-top: 0;
 }
 
@@ -879,7 +904,9 @@ header.navbar-default {
   text-align: center;
 }
 
-.view-content .wb-clndr .month-view .full tr td.today, .view-content .wb-clndr .month-view .full tr.odd td.today, .view-content .wb-clndr .month-view .full tr.even td.today {
+.view-content .wb-clndr .month-view .full tr td.today,
+.view-content .wb-clndr .month-view .full tr.odd td.today,
+.view-content .wb-clndr .month-view .full tr.even td.today {
   border-left: 2px solid #176ca7;
   border-right: 2px solid #176ca7;
 }
@@ -1081,7 +1108,8 @@ ul.js-facets-checkbox-links .facet-item label {
   padding-top: 1em;
 }
 
-.wb-srch-multi button, .wb-srch-multi input {
+.wb-srch-multi button,
+.wb-srch-multi input {
   border-radius: 0;
 }
 
@@ -1092,7 +1120,9 @@ ul.js-facets-checkbox-links .facet-item label {
   font-size: 17px;
 }
 
-.wb-srch-multi button:active, .wb-srch-multi button:focus, .wb-srch-multi button:hover {
+.wb-srch-multi button:active,
+.wb-srch-multi button:focus,
+.wb-srch-multi button:hover {
   background: #243850;
 }
 
