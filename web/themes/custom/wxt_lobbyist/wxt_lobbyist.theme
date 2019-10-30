@@ -10,11 +10,14 @@
  */
 function wxt_lobbyist_preprocess_html(array &$variables) {
   /* Add class to html tag */
-  //$variables['html_attributes']->addClass('no-js');
-
-  // Don't display the site name twice on the front page (and potentially others)
-  /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
-    $variables['head_title'] = $variables['head_title_array']['name'];
+  // $variables['html_attributes']->addClass('no-js');
+  // Don't display the site name twice
+  // on the front page (and potentially others)
+  /*if (isset($variables['head_title_array']['title'])
+  && isset($variables['head_title_array']['name'])
+  && ($variables['head_title_array']['title']
+  == $variables['head_title_array']['name'])) {
+  $variables['head_title'] = $variables['head_title_array']['name'];
   }*/
 }
 
@@ -24,12 +27,12 @@ function wxt_lobbyist_preprocess_html(array &$variables) {
 function wxt_lobbyist_page_attachments_alter(array &$page) {
   // Tell IE to use latest rendering engine (not to use compatibility mode).
   /*$ie_edge = [
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => [
-    'http-equiv' => 'X-UA-Compatible',
-    'content' => 'IE=edge',
-    ],
+  '#type' => 'html_tag',
+  '#tag' => 'meta',
+  '#attributes' => [
+  'http-equiv' => 'X-UA-Compatible',
+  'content' => 'IE=edge',
+  ],
   ];
   $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
 }
@@ -44,14 +47,16 @@ function wxt_lobbyist_preprocess_page(array &$variables) {
 /**
  * Implements hook_theme_suggestions_page_alter().
  */
-function wxt_lobbyist_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_page_alter(array &$suggestions, array
+                                                                   $variables) {
 
 }
 
 /**
  * Implements hook_theme_suggestions_node_alter().
  */
-function wxt_lobbyist_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_node_alter(array &$suggestions, array
+                                                                  $variables) {
   /*$node = $variables['elements']['#node'];
 
   if ($variables['elements']['#view_mode'] == "full") {
@@ -69,7 +74,9 @@ function wxt_lobbyist_preprocess_block(array &$variables) {
 /**
  * Implements hook_theme_suggestions_field_alter().
  */
-function wxt_lobbyist_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_field_alter(array &$suggestions, array
+                                                                  $variables) {
+
   /*$element = $variables['element'];
   $suggestions[] = 'field__' . $element['#view_mode'];
   $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
@@ -78,10 +85,11 @@ function wxt_lobbyist_theme_suggestions_field_alter(array &$suggestions, array $
 /**
  * Implements hook_theme_suggestions_field_alter().
  */
-function wxt_lobbyist_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_fieldset_alter(array &$suggestions,
+                                                            array $variables) {
   /*$element = $variables['element'];
   if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
-    $suggestions[] = 'fieldset__form_composite';
+  $suggestions[] = 'fieldset__form_composite';
   }*/
 }
 
@@ -90,13 +98,14 @@ function wxt_lobbyist_theme_suggestions_fieldset_alter(array &$suggestions, arra
  */
 function wxt_lobbyist_preprocess_node(array &$variables) {
   // Default to turning off byline/submitted.
-  //$variables['display_submitted'] = FALSE;
+  // $variables['display_submitted'] = FALSE;
 }
 
 /**
  * Implements hook_theme_suggestions_views_view_alter().
  */
-function wxt_lobbyist_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_views_view_alter(array &$suggestions,
+                                                             array $variables) {
 
 }
 
@@ -104,14 +113,14 @@ function wxt_lobbyist_theme_suggestions_views_view_alter(array &$suggestions, ar
  * Implements hook_preprocess_form().
  */
 function wxt_lobbyist_preprocess_form(array &$variables) {
-  //$variables['attributes']['novalidate'] = 'novalidate';
+  // $variables['attributes']['novalidate'] = 'novalidate';
 }
 
 /**
  * Implements hook_preprocess_select().
  */
 function wxt_lobbyist_preprocess_select(array &$variables) {
-  //$variables['attributes']['class'][] = 'select-chosen';
+  // $variables['attributes']['class'][] = 'select-chosen';
 }
 
 /**
@@ -119,7 +128,7 @@ function wxt_lobbyist_preprocess_select(array &$variables) {
  */
 function wxt_lobbyist_preprocess_field(array &$variables, $hook) {
   /*switch ($variables['element']['#field_name']) {
-  }*/
+}*/
 }
 
 /**
@@ -133,7 +142,8 @@ function wxt_lobbyist_preprocess_details(array &$variables) {
 /**
  * Implements hook_theme_suggestions_details_alter().
  */
-function wxt_lobbyist_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+function wxt_lobbyist_theme_suggestions_details_alter(array &$suggestions,
+                                                             array $variables) {
 
 }
 
@@ -141,5 +151,6 @@ function wxt_lobbyist_theme_suggestions_details_alter(array &$suggestions, array
  * Implements hook_preprocess_menu_local_task().
  */
 function wxt_lobbyist_preprocess_menu_local_task(array &$variables) {
-  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+  // $variables['element']['#link']['url']->
+  // setOption('attributes', ['class'=>'rounded']);
 }
