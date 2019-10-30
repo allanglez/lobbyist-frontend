@@ -1,0 +1,22 @@
+uuid: 61739fe4-1624-4731-a82a-2ad3d10bb04b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: tKnxXzEgiZt4P1kSKifNzbrryhog9XteiDVXbdjt0rc
+id: wxt_bootstrap_content
+theme: wxt_bootstrap
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 3e3bb62c-2ae5-4d0a-a146-7c3e7144b04d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wxt_bootstrap_yukon
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: wxt_bootstrap_yukon_messages
+theme: wxt_bootstrap_yukon
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

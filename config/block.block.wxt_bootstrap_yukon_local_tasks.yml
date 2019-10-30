@@ -1,0 +1,22 @@
+uuid: 7628c69f-ec29-4c5b-ae8d-14043ed1ec1b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wxt_bootstrap_yukon
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: wxt_bootstrap_yukon_local_tasks
+theme: wxt_bootstrap_yukon
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
