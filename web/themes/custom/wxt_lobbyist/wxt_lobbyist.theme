@@ -99,8 +99,7 @@ function wxt_lobbyist_theme_suggestions_fieldset_alter(array &$suggestions,
  */
 function wxt_lobbyist_preprocess_node(array &$variables) {
   /* Default to turning off byline/submitted;
-  $variables['display_submitted'] = FALSE;
-  */
+  $variables['display_submitted'] = FALSE;*/
 }
 
 /**
