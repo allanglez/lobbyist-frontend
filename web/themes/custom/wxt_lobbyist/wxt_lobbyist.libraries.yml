@@ -26,3 +26,5 @@ drupal.wxt_bootstrap:
     - core/drupal
     - core/drupalSettings
     - wxt_bootstrap/framework
+
+
