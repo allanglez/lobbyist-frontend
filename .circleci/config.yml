@@ -138,7 +138,7 @@ jobs:
       # Rsync the build artifact pieces web directory
       - run:
           name: sync build artifact
-          command: rsync -rz /tmp/web /tmp/vendor /tmp/drush .
+          command: rsync -rz --links /tmp/web /tmp/vendor /tmp/drush .
 
       # Deploy to Pantheon
       - run:
@@ -238,7 +238,7 @@ workflows:
       - build_php
       - deploy_to_pantheon:
           requires:
-            # - static_tests
+            - static_tests
             - build_php
       - visual_regression_test:
           requires:
