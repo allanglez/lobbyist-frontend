@@ -6,27 +6,18 @@
     {%
       set navbar_classes = []
     %}
- 
- 
- {% if page.navigation %}
-        <div class="navigation">{{ page.navigation }}</div>
-  {% endif %}
-
 
   <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
     <div id="wb-bnr">
       <div class="container">
         <div class="row">
           <div class="site-main-logo col-xs-6">
-            {{ drupal_entity('block', 'wxt_bootstrap_yukon_sitebranding') }}
+            {{page.branding}}
           </div>
           <div class="site-nav-toggle col-xs-6">
             <div class="row">
               <div class="pull-right">
-                <section id="wb-lng" class="header-lang-toggle">
-                  {{ drupal_entity('block', 'languageswitcher')}}
-                </section>
-              </div>
+                {{page.navigation}}
             </div>
           </div>
         </div>
@@ -36,10 +27,6 @@
 
   {% endblock %}
 {% endif %}
-
-  <div class="aurora-town">
-    <span class="aurora--main"></span>
-  </div>
 
 {# Main #}
 {% block main %}
@@ -96,7 +83,6 @@
           <a id="main-content"></a>
           {{ page.content_header }}
           {{ page.content }}
-          <!--span class="aurora--mini"></span-->
           {{ page.content_footer }}
         {% endblock %}
       </div>
