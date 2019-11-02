@@ -53,7 +53,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/paragraphs": "^1.10",
         "drupal/lightning_core": "^4.7",
-        "drupal/button_link":"^1.1'",
+        "drupal/button_link":"^1.1",
         "drupal/linkit": "^4.3",
         "drupal/token_filter": "^1.1",
         "drupal/views_bootstrap": "^4.1",
