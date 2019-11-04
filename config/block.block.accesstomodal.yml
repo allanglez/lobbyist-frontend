@@ -1,23 +1,23 @@
-uuid: cd6d64ad-9fdd-4f4d-81fd-7ac2fa60c95f
+uuid: 99814bef-1be3-471e-883d-cefc83435312
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:b46a4c8f-1d48-43e0-8f74-edd69b85b7bd'
+    - 'block_content:basic:f65d6df0-0e35-48a0-a18f-806946b12b6f'
   module:
     - block_content
     - wxt_library
   theme:
     - wxt_lobbyist
-id: homepageintro
+id: accesstomodal
 theme: wxt_lobbyist
-region: header
+region: content
 weight: 0
 provider: null
-plugin: 'block_content:b46a4c8f-1d48-43e0-8f74-edd69b85b7bd'
+plugin: 'block_content:f65d6df0-0e35-48a0-a18f-806946b12b6f'
 settings:
-  id: 'block_content:b46a4c8f-1d48-43e0-8f74-edd69b85b7bd'
-  label: 'Homepage intro'
+  id: 'block_content:f65d6df0-0e35-48a0-a18f-806946b12b6f'
+  label: 'Access to Modal'
   provider: block_content
   label_display: '0'
   status: true

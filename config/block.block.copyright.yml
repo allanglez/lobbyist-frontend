@@ -1,9 +1,9 @@
-uuid: 2f275911-437e-418a-9bc1-0b7877c18cec
+uuid: 8eedb13c-a068-42e1-a918-933089f9aafe
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:789002d1-c285-4dc3-8edf-7539174d2c18'
+    - 'block_content:basic:7e4cbdce-81d6-44a3-819c-741df8d4706e'
   module:
     - block_class
     - block_content
@@ -18,9 +18,9 @@ theme: wxt_lobbyist
 region: footer
 weight: -9
 provider: null
-plugin: 'block_content:789002d1-c285-4dc3-8edf-7539174d2c18'
+plugin: 'block_content:7e4cbdce-81d6-44a3-819c-741df8d4706e'
 settings:
-  id: 'block_content:789002d1-c285-4dc3-8edf-7539174d2c18'
+  id: 'block_content:7e4cbdce-81d6-44a3-819c-741df8d4706e'
   label: Copyright
   provider: block_content
   label_display: '0'

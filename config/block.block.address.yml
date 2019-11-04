@@ -1,9 +1,9 @@
-uuid: a72dc514-0837-4fab-b299-eee9b3f66ae2
+uuid: eee46b68-4dfa-41fd-86b4-a2f4ba814840
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:758b3fa4-c64a-4cd7-b9a3-18b3f8edead0'
+    - 'block_content:basic:68737290-3a9b-4943-b81d-2300bc9791ce'
   module:
     - block_class
     - block_content
@@ -12,15 +12,15 @@ dependencies:
     - wxt_lobbyist
 third_party_settings:
   block_class:
-    classes: 'colxs-12 col-md-6'
+    classes: 'col-xs-12 col-md-6'
 id: address
 theme: wxt_lobbyist
 region: footer
 weight: -8
 provider: null
-plugin: 'block_content:758b3fa4-c64a-4cd7-b9a3-18b3f8edead0'
+plugin: 'block_content:68737290-3a9b-4943-b81d-2300bc9791ce'
 settings:
-  id: 'block_content:758b3fa4-c64a-4cd7-b9a3-18b3f8edead0'
+  id: 'block_content:68737290-3a9b-4943-b81d-2300bc9791ce'
   label: Address
   provider: block_content
   label_display: '0'

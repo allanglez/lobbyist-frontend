@@ -1,0 +1,176 @@
+uuid: 1e0184c1-ca4a-406e-baea-d696c385eacd
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: registration_modal
+title: 'Registration Modal'
+description: ''
+category: ''
+elements: "page_0:\n  '#type': webform_wizard_page\n  '#title': page_0\n  '#prev_button_label': BACK\n  '#next_button_label': 'I AGREE'\n  disclaimer_body:\n    '#type': webform_markup\n    '#markup': 'This is a publication of the Office of the Conflict of Interest Commissioner, for general information only. The provisions in the Yukon Lobbyists Registration Act can be regarded as authoritative and prevail in all cases.'\npage_1:\n  '#type': webform_wizard_page\n  '#title': page_1\n  '#prev_button_label': BACK\n  '#next_button_label': NEXT\n  markup:\n    '#type': webform_markup\n    '#markup': 'Are you communicating with a public office holder?'\n  processed_text:\n    '#type': processed_text\n    '#text': |\n      <p><img alt=\".\" data-entity-type=\"file\" data-entity-uuid=\"e6c641d0-6ef4-4361-84c4-168372fbdfd2\" src=\"/sites/default/files/inline-images/people_tax5_0.png\" /></p>\n      \n    '#format': full_html\npage_2:\n  '#type': webform_wizard_page\n  '#title': page_2\n  '#states':\n    visible:\n      ':input[name=\"no\"]':\n        value: 'Yes'\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_01:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"no\"]':\n          value: 'No'\n    '#markup': 'Are you communicating with a public office holder?'\n  markup_02:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"no\"]':\n          value: 'No'\n    '#markup': |\n      - Member of the Legislative Assembly (MLA)<br />\n      - A Minister or an employee of the Cabinet office<br />\n      - Deputy Minister of a department/directorate or the President of a government corporation<br />\n      - Government of Yukon employee<br />\n      - Yukon Crown Corporation employee<br />\n      &nbsp;\n      \n  markup_22:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"no\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_04:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"no\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_05:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"no\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  'no':\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_3:\n  '#type': webform_wizard_page\n  '#title': page_3\n  '#prev_button_label': BACK\n  '#next_button_label': NEXT\n  markup_03:\n    '#type': webform_markup\n    '#markup': 'How are you communicating with a public office holder?'\n  processed_text_01:\n    '#type': processed_text\n    '#text': |\n      <img alt=\"m\" data-align=\"center\" data-entity-type=\"file\" data-entity-uuid=\"3e94f7f3-6cc6-4994-93f8-c85f79e9876f\" src=\"/sites/default/files/inline-images/undraw_social_girl_562b_0.png\" />\n      <p>&nbsp;</p>\n      \n    '#format': full_html\npage_4:\n  '#type': webform_wizard_page\n  '#title': page_4\n  '#states':\n    enable:\n      '':\n        '': ''\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_04:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"select_one_option\"]':\n          value: 'No'\n    '#markup': 'How are you communicating with a public office holder?'\n  markup_05:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"select_one_option\"]':\n          value: 'No'\n    '#markup': |\n      - Social media appeals<br />\n      - Phone calls or texting<br />\n      - Meetings (formal and informal)<br />\n      - Arranging a meeting with a public office holder for a client<br />\n      - Persuading the public to sign petitions (i.e. grassroots lobbying)\n      \n  markup_23:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"select_one_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_06:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"select_one_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_07:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"select_one_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  select_one_option:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_5:\n  '#type': webform_wizard_page\n  '#title': page_5\n  '#prev_button_label': BACK\n  '#next_button_label': NEXT\n  markup_06:\n    '#type': webform_markup\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  processed_text_02:\n    '#type': processed_text\n    '#text': |\n      <img alt=\"se\" data-align=\"center\" data-entity-type=\"file\" data-entity-uuid=\"66745bb9-4847-4ada-928e-65dc9fab97ed\" src=\"/sites/default/files/inline-images/services_5tv9_0.png\" />\n      <p>&nbsp;</p>\n      \n    '#format': basic_html\npage_6:\n  '#type': webform_wizard_page\n  '#title': page_6\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_07:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_08:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option\"]':\n          value: 'No'\n    '#markup': |\n      - The development of a legislative proposal.<br />\n      e.g. proposal to develop lobbying legislation\n      \n  markup_27:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_08:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_09:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_1:\n  '#type': webform_wizard_page\n  '#title': page_6_1\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_24:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_1\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_25:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_1\"]':\n          value: 'No'\n    '#markup': |\n      - The introduction of any Bill, motion or resolution in the Legislative Assembly OR the passage, amendment or defeat of any Act, Bill, motion or resolution.\n      e.g. Bill 23 the Lobbyists Registration Act\n      \n  markup_26:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_1\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_10:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_1\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_11:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_1\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_1:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_2:\n  '#type': webform_wizard_page\n  '#title': page_6_2\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_28:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_2\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_29:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_2\"]':\n          value: 'No'\n    '#markup': |\n      - Making or amending a regulation\n      e.g. Lobbying Regulation\n      \n  markup_30:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_2\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_12:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_2\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_13:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_2\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_2:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_3:\n  '#type': webform_wizard_page\n  '#title': page_6_3\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_31:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_3\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_32:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_3\"]':\n          value: 'No'\n    '#markup': |\n      - The development, amendment or termination of a policy or program of the Government of Yukon.\n      e.g. Yukon should create a new program for youth.\n      \n  markup_33:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_3\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_14:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_3\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_15:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_3\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_3:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_4:\n  '#type': webform_wizard_page\n  '#title': page_6_4\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_34:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_4\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_35:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_4\"]':\n          value: 'No'\n    '#markup': |\n      - A decision by Cabinet  or a Cabinet committee or a minister to have the private sector instead of the Government of Yukon provide goods or services to the Government of Yukon.\n      \n  markup_36:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_4\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_16:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_4\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_17:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_4\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_5:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_5:\n  '#type': webform_wizard_page\n  '#title': page_6_5\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_37:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_5\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_38:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_5\"]':\n          value: 'No'\n    '#markup': |\n      - The awarding of a grant, contribution or other financial benefit by or on behalf of the Government of Yukon.\n      e.g. Awarding of a transfer payment agreement.\n      \n  markup_39:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_5\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_18:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_5\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_19:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_5\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_4:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_6_6:\n  '#type': webform_wizard_page\n  '#title': page_6_6\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_09:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_6\"]':\n          value: 'No'\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_10:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_6\"]':\n          value: 'No'\n    '#markup': |\n      - The awarding of a contract by or on behalf of the Government of Yukon.\n      e.g. Awarding a contract to build a new government facility.\n      \n  markup_40:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_6\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_20:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_6\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_21:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_6\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_6:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_7:\n  '#type': webform_wizard_page\n  '#title': page_7\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_11:\n    '#type': webform_markup\n    '#markup': 'Is the intended outcome of your communications an attempt to influence?'\n  markup_12:\n    '#type': webform_markup\n    '#markup': |\n      - The awarding of a grant, contribution or other financial benefit by or on behalf of the Government of Yukon.<br />\n      e.g. Awarding of a transfer payment agreement.<br />\n      &nbsp;\n      \npage_8:\n  '#type': webform_wizard_page\n  '#title': page_8\n  '#prev_button_label': BACK\n  '#next_button_label': NEXT\n  markup_13:\n    '#type': webform_markup\n    '#markup': 'What is your role?'\n  processed_text_03:\n    '#type': processed_text\n    '#text': |\n      <p><img alt=\"mi\" data-entity-type=\"file\" data-entity-uuid=\"6e4dcdb8-893f-4d37-aa2b-b1ee66891cc0\" src=\"/sites/default/files/inline-images/undraw_mello_otq1_0.png\" /></p>\n      \n    '#format': full_html\npage_9:\n  '#type': webform_wizard_page\n  '#title': page_9\n  '#prev_button_label': BACK\n  '#next_button_label': NEXT\n  markup_14:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_7\"]':\n          value: 'No'\n    '#markup': 'What is your role?'\n  markup_15:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_7\"]':\n          value: 'No'\n    '#markup': |\n      - An individual who will or is undertaking to lobby on behalf of a client?<br />\n      e.g. you have a contract with a client to lobby on their behalf?\n      \n    '#wrapper_attributes':\n      class:\n        - title\n  processed_text_24:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_7\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_25:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_7\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_7:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_10:\n  '#type': webform_wizard_page\n  '#title': page_10\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_16:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_8\"]':\n          value: 'No'\n    '#markup': 'What is your role?'\n  markup_17:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_8\"]':\n          value: 'No'\n    '#markup': |\n      - An individual employed by another individual, or by a corporation, partnership or organization.&nbsp;<br />\n      e.g. An employee of a company who is lobbying on behalf of their own employer.\n      \n    '#wrapper_attributes':\n      class:\n        - title\n  processed_text_22:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_8\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_23:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_8\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_8:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_11:\n  '#type': webform_wizard_page\n  '#title': page_11\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_18:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_9\"]':\n          value: 'No'\n    '#markup': 'What is your role?'\n  markup_19:\n    '#type': webform_markup\n    '#states':\n      invisible:\n        ':input[name=\"are_you_option_9\"]':\n          value: 'No'\n    '#markup': |\n      - A self-employed person or a partner in a partnership.&nbsp;<br />\n      &nbsp;\n      \n  markup_43:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_9\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_26:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_9\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_27:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_9\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_9:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true\npage_12:\n  '#type': webform_wizard_page\n  '#title': page_12\n  '#prev_button_label': BACK\n  '#next_button_label': 'YES'\n  markup_20:\n    '#type': webform_markup\n    '#markup': 'What is your role?'\n  markup_21:\n    '#type': webform_markup\n    '#markup': |\n      - An individual who controls the operations of a corporation, partnership or organization in whole or in part. (i.e. a &ldquo;directing mind&rdquo;)&nbsp;<br />\n      e.g. A board member of a society lobbying on behalf of the society.<br />\n      &nbsp;\n      \n  markup_44:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_10\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - title\n    '#markup': 'You do not appear to be a lobbyist'\n  processed_text_28:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_10\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - body\n    '#text': |\n      <p>Based on your responses, you do not appear to be a lobbyist as defined by the Lobbyists Registration Act.</p>\n      \n    '#format': basic_html\n  processed_text_29:\n    '#type': processed_text\n    '#states':\n      visible:\n        ':input[name=\"are_you_option_10\"]':\n          value: 'No'\n    '#wrapper_attributes':\n      class:\n        - custom-button\n    '#text': |\n      <a href=\"http://dev-lobbyist-frontend.pantheonsite.io\">GO BACK TO THE LOBBYIST REGISTRY HOMEPAGE</a>\n      \n    '#format': restricted_html\n  are_you_option_10:\n    '#type': webform_buttons\n    '#title': 'Select one option'\n    '#options': yes_no\n    '#required': true"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
