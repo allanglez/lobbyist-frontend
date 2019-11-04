@@ -13,10 +13,9 @@ url:
     - 'system/ajax/*'
 theme:
   visibility: 1
-  themes:
-    wxt_bootstrap: wxt_bootstrap
+  themes: {  }
 minimized:
-  options: 1
+  options: 0
 files:
   types:
     css: css

@@ -1,0 +1,33 @@
+uuid: cf9914b8-f53a-42f4-a8ef-975c00472473
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - menu_block
+    - wxt_library
+  theme:
+    - wxt_lobbyist
+id: useraccountmenu
+theme: wxt_lobbyist
+region: navigation
+weight: -8
+provider: null
+plugin: 'menu_block:account'
+settings:
+  id: 'menu_block:account'
+  label: 'User account menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'account:'
+  suggestion: account
+visibility:
+  panels_title:
+    id: panels_title
+    enabled: 0
+    negate: false
+    context_mapping: {  }

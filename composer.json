@@ -50,7 +50,20 @@
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "8.7.8",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "drupal/paragraphs": "^1.10",
+        "drupal/lightning_core": "^4.7",
+        "drupal/button_link":"^1.1",
+        "drupal/linkit": "^4.3",
+        "drupal/token_filter": "^1.1",
+        "drupal/views_bootstrap": "^4.1",
+        "drupal/bootstrap_layouts": "^5.1",
+        "drupal/lightning_layout": "^2.1",
+        "drupal/page_manager": "^4.0",
+        "drupal/config_rewrite":"^1.2",
+        "drupal/lightning_workflow": "^3.10",
+        "drupal/lightning_media": "^3.12"
+
     },
     "require-dev": {
         "behat/behat": "3.*",

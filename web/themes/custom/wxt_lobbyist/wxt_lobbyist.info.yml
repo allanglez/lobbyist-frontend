@@ -1,6 +1,6 @@
-name: wxt_lobbyist
+name: 'WxT Lobbyist'
 type: theme
-description: 'My Awesome theme'
+description: 'WxT sub-theme(s) support leveraging WxT Bootstrap. Source files for Bootstrap are defined as part of the WxT Library module.'
 package: Other
 core: 8.x
 libraries:
@@ -10,22 +10,21 @@ base theme: wxt_bootstrap
 
 regions:
   branding: 'Branding'
-  breadcrumb: 'Breadcrumbs'
-  language_toggle: 'Language Toggle'
-  banner: 'Banner'
-  search: 'Search'
+  navbar: 'Navbar'
   navigation: 'Navigation'
-  navigation_collapsible: 'Navigation (Collapsible)'
-  header: 'Header'
+  search_bar: 'Search bar'
+  site_alert: 'Site Wide Alert'
   highlighted: 'Highlighted'
+  header: 'Header'
   help: 'Help'
+  inline_arlert:  'In-Page Alert'
   content: 'Content'
-  content_footer: 'Content Footer'
-  sidebar_first: 'Sidebar First'
-  sidebar_second: 'Sidebar Second'
+  page_form:  'Page webform'
+  sidebar: 'Sidebar'
+  sidebar_sticky: 'Sidebar Sticky'
+  featured: 'Featured'
+  footer_top: 'Footer Top'
   footer: 'Footer'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
 
 libraries-extend:
   bootstrap/framework:
