@@ -1,0 +1,35 @@
+uuid: 2f275911-437e-418a-9bc1-0b7877c18cec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:789002d1-c285-4dc3-8edf-7539174d2c18'
+  module:
+    - block_class
+    - block_content
+    - wxt_library
+  theme:
+    - wxt_lobbyist
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-md-6'
+id: copyright
+theme: wxt_lobbyist
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:789002d1-c285-4dc3-8edf-7539174d2c18'
+settings:
+  id: 'block_content:789002d1-c285-4dc3-8edf-7539174d2c18'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  panels_title:
+    id: panels_title
+    enabled: 0
+    negate: false
+    context_mapping: {  }

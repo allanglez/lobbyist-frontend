@@ -1,0 +1,42 @@
+schemas:
+  bootstrap: 8000
+  wxt_bootstrap: 8000
+  wxt_lobbyist: 8000
+modal_jquery_ui_bridge: 0
+_core:
+  default_config_hash: mO7mxem0JY6zvAroR3ebmv8PCghq7rhAHpmoBlTnb9o
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://pr-9-lobbyist-frontend.pantheonsite.io/themes/contrib/wxt_bootstrap/favicon.ico'
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://Screen Shot 2019-11-01 at 1.18.59 PM.png'
+  url: ''
+  use_default: false
+wxt_skip_link_primary_text: 'Skip to main content'
+wxt_skip_link_secondary_text: 'Skip to "About this site"'
+cdn_provider: jsdelivr
+region_wells:
+  branding: ''
+  breadcrumb: ''
+  language_toggle: ''
+  banner: ''
+  search: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  content_footer: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+table_responsive: '-1'
+table: ''
