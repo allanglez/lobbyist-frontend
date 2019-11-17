@@ -5,6 +5,13 @@ global-styling:
       css/style_yukon.css: {}
       css/slick-theme.css: {}
       css/slick.css: {}
+      css/lobbyist-finder.css: {}
+  js:    
+    js/registration-modal.js: {}
+fonts:
+  css:
+    theme:
+      "//fonts.googleapis.com/css?family=Open+Sans:400,500,600,800,900": {external:true}
   js:
     # js/bootstrap/affix.js: {}
     js/bootstrap/alert.js: {}
