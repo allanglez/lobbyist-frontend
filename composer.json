@@ -63,7 +63,8 @@
         "drupal/config_rewrite":"^1.2",
         "drupal/lightning_workflow": "^3.10",
         "drupal/lightning_media": "^3.12",
-	"drupal/menu_breadcrumb": "^1.11"
+        "drupal/menu_breadcrumb": "^1.11",
+        "drupal/multiple_registration": "^2.87"
     },
     "require-dev": {
         "behat/behat": "3.*",
