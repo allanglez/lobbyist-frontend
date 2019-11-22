@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6cd663e902b938bc132610e9f9ed3d7",
+    "content-hash": "034a4d379a3372588312b43e8599d826",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -228,7 +228,7 @@
             "version": "v5.5.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:enyo/dropzone.git",
+                "url": "https://github.com/enyo/dropzone.git",
                 "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9"
             },
             "dist": {
@@ -261,7 +261,7 @@
             "version": "v1.8.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:kenwheeler/slick.git",
+                "url": "https://github.com/kenwheeler/slick.git",
                 "reference": "0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee"
             },
             "dist": {
@@ -3604,6 +3604,70 @@
             "time": "2018-02-09T18:02:28+00:00"
         },
         {
+            "name": "drupal/email_registration",
+            "version": "1.0.0-rc7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/email_registration.git",
+                "reference": "8.x-1.0-rc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/email_registration-8.x-1.0-rc7.zip",
+                "reference": "8.x-1.0-rc7",
+                "shasum": "a3ebc1e38539e7916f48e827d5bd7b1abeef0011"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc7",
+                    "datestamp": "1557344281",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Knaddison (greggles)",
+                    "homepage": "https://www.drupal.org/u/greggles",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrey Postnikov (andypost)",
+                    "homepage": "https://www.drupal.org/u/andypost",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Chris Herberte",
+                    "homepage": "https://www.drupal.org/u/chris-herberte",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Moshe Weitzman (moshe weitzman)",
+                    "homepage": "https://www.drupal.org/u/moshe-weitzman",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows users to register with an email address as their username.",
+            "homepage": "https://www.drupal.org/project/email_registration",
+            "support": {
+                "source": "http://cgit.drupalcode.org/email_registration",
+                "issues": "http://drupal.org/project/issues/email_registration"
+            }
+        },
+        {
             "name": "drupal/embed",
             "version": "1.0.0",
             "source": {
@@ -5740,6 +5804,61 @@
             }
         },
         {
+            "name": "drupal/multiple_registration",
+            "version": "2.87.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/multiple_registration.git",
+                "reference": "8.x-2.87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/multiple_registration-8.x-2.87.zip",
+                "reference": "8.x-2.87",
+                "shasum": "878c447ac97024eacf20e7bb77b69187594991cc"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.87",
+                    "datestamp": "1571938386",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Liannoy",
+                    "homepage": "https://www.drupal.org/user/2415162"
+                },
+                {
+                    "name": "Oleksandr Ivanchenko",
+                    "homepage": "https://www.drupal.org/user/857858"
+                },
+                {
+                    "name": "ysamoylenko",
+                    "homepage": "https://www.drupal.org/user/3554629"
+                }
+            ],
+            "description": "Adds ability to create several registration pages",
+            "homepage": "https://www.drupal.org/project/multiple_registration",
+            "support": {
+                "source": "https://git.drupalcode.org/project/multiple_registration"
+            }
+        },
+        {
             "name": "drupal/page_manager",
             "version": "4.0.0-beta4",
             "source": {
@@ -6681,6 +6800,109 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/slick_entityreference",
                 "issues": "https://drupal.org/project/issues/slick_entityreference"
+            }
+        },
+        {
+            "name": "drupal/telephone_formatter",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/telephone_formatter.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/telephone_formatter-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "a666215b950e8ec2c83d3882008db8a59c1caf39"
+            },
+            "require": {
+                "drupal/core": "*",
+                "giggsey/libphonenumber-for-php": "^8.0"
+            },
+            "suggest": {
+                "drupal/telephone_validation": "Unsure data quality"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1549031580",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Piasecki",
+                    "homepage": "https://www.drupal.org/user/1532844",
+                    "email": "jakub@piaseccy.pl"
+                }
+            ],
+            "description": "Additional formatters to Telephone field.",
+            "homepage": "https://www.drupal.org/project/telephone_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/telephone_formatter",
+                "issues": "http://drupal.org/project/issues/telephone_formatter"
+            }
+        },
+        {
+            "name": "drupal/telephone_validation",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/telephone_validation.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/telephone_validation-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "5f79cd8890cbc70a7c234f88a4f37a5d42354443"
+            },
+            "require": {
+                "drupal/core": "^8.0",
+                "drupal/telephone": "*",
+                "giggsey/libphonenumber-for-php": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1549289280",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
+                }
+            ],
+            "description": "Use 3rd party library to validate telephone field.",
+            "homepage": "http://drupal.org/project/telephone_validation",
+            "support": {
+                "source": "https://git.drupalcode.org/project/telephone_validation",
+                "issues": "http://drupal.org/project/issues/telephone_validation"
             }
         },
         {
@@ -7948,6 +8170,123 @@
                 "html"
             ],
             "time": "2019-10-28T03:44:26+00:00"
+        },
+        {
+            "name": "giggsey/libphonenumber-for-php",
+            "version": "8.10.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/libphonenumber-for-php.git",
+                "reference": "e5643cc3e10b3e071632b23c973ec5fe20137a56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/e5643cc3e10b3e071632b23c973ec5fe20137a56",
+                "reference": "e5643cc3e10b3e071632b23c973ec5fe20137a56",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "giggsey/locale": "^1.7",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "^2.7",
+                "php-coveralls/php-coveralls": "^1.0|^2.0",
+                "phpunit/phpunit": "^4.8.36|^5.0",
+                "symfony/console": "^2.8|^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "libphonenumber\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/src/data/",
+                    "/src/carrier/data/",
+                    "/src/geocoding/data/",
+                    "/src/timezone/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "PHP Port of Google's libphonenumber",
+            "homepage": "https://github.com/giggsey/libphonenumber-for-php",
+            "keywords": [
+                "geocoding",
+                "geolocation",
+                "libphonenumber",
+                "mobile",
+                "phonenumber",
+                "validation"
+            ],
+            "time": "2019-11-13T09:59:46+00:00"
+        },
+        {
+            "name": "giggsey/locale",
+            "version": "1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/Locale.git",
+                "reference": "85a1b251bad11c986fec2a051b10d4b80a5caa1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/85a1b251bad11c986fec2a051b10d4b80a5caa1b",
+                "reference": "85a1b251bad11c986fec2a051b10d4b80a5caa1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "~2.7",
+                "php-coveralls/php-coveralls": "^1.0|^2.0",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "symfony/console": "^2.8|^3.0|^4.0",
+                "symfony/filesystem": "^2.8|^3.0|^4.0",
+                "symfony/finder": "^2.8|^3.0|^4.0",
+                "symfony/process": "^2.8|^3.0|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Giggsey\\Locale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "http://giggsey.com/"
+                }
+            ],
+            "description": "Locale functions required by libphonenumber-for-php",
+            "time": "2019-10-09T18:53:14+00:00"
         },
         {
             "name": "gimler/guzzle-description-loader",
