@@ -13,7 +13,8 @@ url:
     - 'system/ajax/*'
 theme:
   visibility: 1
-  themes: {  }
+  themes:
+    wxt_lobbyist: wxt_lobbyist
 minimized:
   options: 0
 files:
