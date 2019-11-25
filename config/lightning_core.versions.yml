@@ -77,8 +77,6 @@ standard: 8.7.8
 system: 8.7.8
 taxonomy: 8.7.8
 telephone: 8.7.8
-telephone_formatter: 1.0.0
-telephone_validation: 2.2.0
 text: 8.7.8
 token: 1.5.0
 toolbar: 8.7.8
