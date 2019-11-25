@@ -62,6 +62,8 @@
         "drupal/wxt_library": "^1.10",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
+        "drupal/telephone_formatter": "^1.0",
+        "drupal/telephone_validation": "^2.2",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "8.7.8",
