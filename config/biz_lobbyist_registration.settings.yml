@@ -1,0 +1,2 @@
+registration_url_api: 'http://pr-14-lobbyist-frontend.pantheonsite.io/entity/user?_format=json'
+validate_email_url_api: 'http://pr-14-lobbyist-frontend.pantheonsite.io/api/users?_format=json&email="'
