@@ -24,7 +24,7 @@ bundle: user
 label: 'FIRST NAME (Consultant)'
 description: 'FIRST NAME'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

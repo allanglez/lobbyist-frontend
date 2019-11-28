@@ -24,7 +24,7 @@ bundle: user
 label: 'LAST NAME (Consultant)'
 description: 'LAST NAME (Consultant)'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

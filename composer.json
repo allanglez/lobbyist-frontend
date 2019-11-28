@@ -33,6 +33,7 @@
         "drupal/console": "^1",
         "drupal/ctools": "^3.2",
         "drupal/devel": "^2.1",
+        "drupal/email_registration": "^1.0",
         "drupal/entity_block": "^1.0@beta",
         "drupal/features": "^3.8",
         "drupal/feeds": "3.x-dev",
@@ -44,6 +45,7 @@
         "drupal/linkit": "^4.3",
         "drupal/menu_block": "^1.5",
         "drupal/menu_breadcrumb": "^1.11",
+        "drupal/multiple_registration": "^2.87",
         "drupal/page_manager": "^4.0",
         "drupal/paragraphs": "^1.10",
         "drupal/restui": "^1.16",
@@ -60,11 +62,13 @@
         "drupal/wxt_library": "^1.10",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
-        "giggsey/libphonenumber-for-php": "^8.10",
+        "drupal/telephone_formatter": "^1.0",
+        "drupal/telephone_validation": "^2.2",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "8.7.8",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "drupal/mask": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.*",
