@@ -68,9 +68,11 @@ path: 8.7.8
 quickedit: 8.7.8
 rdf: 8.7.8
 rest: 8.7.8
+rest_register_verify_email: 1.0.0-rc1
 restui: 1.17.0
 rules: 3.0.0-alpha5
 search: 8.7.8
+select2: 1.4.0
 serialization: 8.7.8
 shortcut: 8.7.8
 standard: 8.7.8

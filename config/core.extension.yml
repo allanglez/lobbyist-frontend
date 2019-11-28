@@ -67,9 +67,11 @@ module:
   quickedit: 0
   rdf: 0
   rest: 0
+  rest_register_verify_email: 0
   restui: 0
   rules: 0
   search: 0
+  select2: 0
   serialization: 0
   shortcut: 0
   system: 0
