@@ -1,0 +1,21 @@
+uuid: 16fb2b30-455f-4605-82fa-7d0baf65c77c
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: consultant_activity.field_user_email
+field_name: field_user_email
+entity_type: consultant_activity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

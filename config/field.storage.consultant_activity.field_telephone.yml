@@ -1,0 +1,21 @@
+uuid: f078285f-a7e9-4f80-ae10-c21a9103d276
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: consultant_activity.field_telephone
+field_name: field_telephone
+entity_type: consultant_activity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

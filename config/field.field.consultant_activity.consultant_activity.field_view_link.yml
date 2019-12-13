@@ -1,0 +1,20 @@
+uuid: 180b2e42-a327-4b0e-8f34-b9ea7e84de43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_view_link
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_view_link
+field_name: field_view_link
+entity_type: consultant_activity
+bundle: consultant_activity
+label: 'View link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

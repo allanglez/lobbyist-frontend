@@ -1,0 +1,20 @@
+uuid: b335955a-8aeb-4bc5-99b0-c92cf414b9ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_email
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_email
+field_name: field_email
+entity_type: consultant_activity
+bundle: consultant_activity
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

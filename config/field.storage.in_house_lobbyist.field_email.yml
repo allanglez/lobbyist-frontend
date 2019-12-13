@@ -1,0 +1,21 @@
+uuid: cd123e96-58d0-4598-a184-1ffda808a3d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_lobbyist.field_email
+field_name: field_email
+entity_type: in_house_lobbyist
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 0cd2bbc6-c986-4061-ba87-50db2cb3c7b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_activity.field_who_are_you_lobbying_or_pl
+field_name: field_who_are_you_lobbying_or_pl
+entity_type: in_house_activity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

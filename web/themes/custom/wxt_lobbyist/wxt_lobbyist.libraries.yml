@@ -5,6 +5,16 @@ global-styling:
       css/style_yukon.css: {}
       css/slick-theme.css: {}
       css/slick.css: {}
+      css/lobbyist-finder.css: {}
+      css/select2.min.css: {}
+  js:    
+    js/registration-modal.js: {}
+    js/select2.full.min.js: {}
+    js/webforms-helptexts.js: {}
+fonts:
+  css:
+    theme:
+      "//fonts.googleapis.com/css?family=Open+Sans:400,500,600,800,900": {external:true}
   js:
     # js/bootstrap/affix.js: {}
     js/bootstrap/alert.js: {}
@@ -22,6 +32,8 @@ global-styling:
     js/sticky.min.js: {}
     js/custom-logic.js: {}
     js/slick.min.js: {}
+    js/select2.full.min.js: {}
+    
   dependencies:
     - core/jquery
 
@@ -33,5 +45,9 @@ drupal.wxt_bootstrap:
     - core/drupal
     - core/drupalSettings
     - wxt_bootstrap/framework
+select2.theme:
+  css:
+    component:
+      css/select2.min.css: {}
 
 

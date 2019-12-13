@@ -1,0 +1,49 @@
+uuid: c016f232-7963-4493-b309-756b837b35ea
+langcode: en
+status: true
+dependencies: {  }
+id: in_house_lobbyist
+label: 'In-house lobbyist'
+label_plural: 'In-house lobbyists'
+description: ''
+read_only: true
+field_mappings:
+  id:
+    value: sid
+  uuid:
+    value: uuid
+  title:
+    value: name
+  field_email:
+    value: email
+  field_position:
+    value: position
+  field_telephone:
+    value: telephone
+  field_user_email:
+    value: user_email
+storage_client_id: rest
+storage_client_config:
+  endpoint: 'http://pr-14-lobbyist-frontend.pantheonsite.io/api/in-house-lobbyist'
+  response_format: json
+  pager:
+    default_limit: '50'
+    page_parameter: ''
+    page_parameter_type: null
+    page_size_parameter: ''
+    page_size_parameter_type: null
+  single_response_in_array: true
+  api_key:
+    header_name: ''
+    key: ''
+  parameters:
+    list:
+      _format: json
+    single:
+      _format: json
+persistent_cache_max_age: 0
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
+inherits_annotation_fields: false
+themeable: true

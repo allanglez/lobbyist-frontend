@@ -1,0 +1,108 @@
+<?php
+	
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Database\Database;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Drupal\biz_webforms\BizWebformController;
+
+function entityHasChanged($entity) {
+    $changed_fields = [];
+    if (!$entity->original) {
+      return $changed_fields;
+    }
+    $field_names = getFieldList($entity->bundle(), $entity->getEntityTypeId());
+    foreach($field_names as $key => $field_name) {
+      if($entity->hasField($field_name) && $field_name != 'field_comments' && !$entity->get($field_name)->equals($entity->original->get($field_name))){
+        $changed_fields[$field_name] = $entity->get($field_name)->getValue();
+      }
+    }
+    return $changed_fields;
+}
+
+  /**
+   * Get list of field names from bundle
+   * @param  string $bundle Bundle name
+   * @return array         Array of field names
+   */
+function getFieldList($bundle, $entity_type_id) {
+	$fields_by_weight = [];
+	$bundle_fields = \Drupal::entityTypeManager()
+	  ->getStorage('entity_view_display')
+	  ->load($entity_type_id . '.' . $bundle . '.' . 'default')
+	  ->getComponents();
+	
+	foreach ($bundle_fields as $name => $options) {
+	  $fields_by_weight[] = $name;
+	}
+	return $fields_by_weight;
+}
+
+
+function biz_webforms_webform_submission_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+	if ($form_id == "webform_submission_add_an_in_house_lobbyust_to_your_node_9_add_form") {
+
+	 	$url = 'http://pr-14-lobbyist-frontend.pantheonsite.io/json/user/' . \Drupal::currentUser()->getEmail();
+	 	$response = BizWebformController::get_endpoint($url, [], "GET", []);
+	 	$data = json_decode($response["message"])[0];
+	 	$form["elements"]["update_organization_action"]["#text"] = '<div class="organization">'
+		.   '<div class="col-xs-6 no-padding">'
+		.     '<p><strong>ORGANIZATION</strong></p>'
+		.   '</div>'
+		.   '<div class="col-xs-6 no-padding update-action">'
+		.     '<a class="update-action" href="user/' . \Drupal::currentUser()->id() . '/edit">EDIT ORGANIZATION</a>'
+		.   '</div>'
+		. '</div>';
+	 	
+	 	
+	 	$form["elements"]["organization_header"]["#text"] = '<div class="header-view">'
+		.    '<div class="header-row no-padding row col-xs-12">'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title">' . 'LEGAL ORGANIZATION' . '</p>' 
+		.        '<p>' . $data->field_legal_organization . '</p>'
+		.      '</div>'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title">' . 'OPERATING ORGANIZATION' . '</p> '
+		.        '<p>' . $data->field_operating_organization . '</p>'
+		.      '</div>'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title"></p>'
+		.        '<p></p>'
+		.      '</div>'
+		.    '</div>'
+		.    '<div class="header-row no-padding row col-xs-12">'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title">' . 'ADDRESS' . '</p> '
+		.        '<p>' . $data->field_street_address_address_line1 . '</p>'
+		.      '</div>'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title">' . 'CITY OR TOWN' . '</p> '
+		.        '<p>' . $data->field_street_address_locality . '</p>'
+		.      '</div>'
+		.      '<div class="field col no-padding align-self-start col-xs-4">'
+		.        '<p class="field-title">' . 'COUNTRY' . '</p> '
+		.        '<p>' . $data->field_street_address_country_code . '</p>'
+		.      '</div>'
+		.    '</div>'
+		.  '</div>';
+ 	}
+}
+
+function biz_webforms_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+	if ($entity->getEntityType()->id() == 'user') {
+		$email = $entity->getEmail();
+		$changed_fields = entityHasChanged($entity);
+		BizWebformController::createConnection();
+		$connection = Database::getConnection();
+		$user_table = "users_field_data";
+		$email_field = "mail";
+		$password_field = "pass";
+		$user_data = $connection->select($user_table, 'u');
+		$user_data->fields('u', array('uid', 'pass'));
+		$user_data->condition($email_field, $email);
+		$user_result = $user_data->execute()->fetchObject();
+
+		$url = \Drupal::config('biz_lobbyist_registration.settings')->get('base_url');
+		BizWebformController::patch_endpoint(($url . 'user/' . $user_result->uid), $changed_fields);
+	}
+}

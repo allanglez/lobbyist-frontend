@@ -1,0 +1,28 @@
+uuid: 96de66b3-9726-4020-90f2-c0f01f581eea
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.default_server
+  module:
+    - search_api
+    - external_entities
+id: in_house_activity
+name: 'In-house activity'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:in_house_activity': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server
