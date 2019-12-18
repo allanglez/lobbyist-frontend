@@ -1,0 +1,22 @@
+uuid: fbdc748d-1d93-4e46-8d90-cec03ccc62ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - biz_webform_rest
+    - serialization
+    - user
+id: biz_webform_rest_submission
+plugin_id: biz_webform_rest_submission
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

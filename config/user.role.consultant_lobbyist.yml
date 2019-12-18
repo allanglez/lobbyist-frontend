@@ -11,4 +11,7 @@ id: consultant_lobbyist
 label: 'Consultant lobbyist'
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access webform submission user'
+  - 'administer webform submission'
+  - 'restful post webform_rest_submit'

@@ -10,5 +10,5 @@ third_party_settings:
 id: in_house_lobbyist
 label: 'In-house lobbyist'
 weight: 3
-is_admin: null
+is_admin: false
 permissions: {  }

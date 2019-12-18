@@ -6,6 +6,8 @@ module:
   big_pipe: 0
   biz_iamlobbyist: 0
   biz_lobbyist_registration: 0
+  biz_webform_rest: 0
+  biz_webforms: 0
   block: 0
   block_class: 0
   block_content: 0
@@ -42,6 +44,7 @@ module:
   help: 0
   history: 0
   http_client_manager: 0
+  http_client_manager_example: 0
   image: 0
   kint: 0
   language: 0
@@ -70,13 +73,17 @@ module:
   restui: 0
   rules: 0
   search: 0
+  select2: 0
+  select2_facets: 0
   serialization: 0
   shortcut: 0
+  structure_sync: 0
   system: 0
   taxonomy: 0
   telephone: 0
   telephone_formatter: 0
   telephone_validation: 0
+  term_csv_export_import: 0
   text: 0
   token: 0
   toolbar: 0
@@ -85,12 +92,18 @@ module:
   typed_data: 0
   update: 0
   user: 0
+  views_aggregator: 0
+  views_aggregator_more_functions: 0
+  views_filters_populate: 0
+  views_taxonomy_term_name_depth: 0
+  views_taxonomy_term_name_into_id: 0
   views_ui: 0
   webform: 0
   webform_composite: 0
   webform_devel: 0
-  webform_rest: 0
+  webform_node: 0
   webform_ui: 0
+  webform_views: 0
   wxt_library: 0
   menu_link_content: 1
   webform_bootstrap: 1
