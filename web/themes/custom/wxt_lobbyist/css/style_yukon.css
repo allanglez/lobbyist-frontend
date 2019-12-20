@@ -13427,6 +13427,10 @@ body .aurora--mini:before {
   border-bottom: 1px solid #d4c7cf;
 }
 
+<<<<<<< HEAD
+=======
+.form-control,
+>>>>>>> master
 .input-group input {
   border-color: #ffcd57;
   background-color: #f1f1f1;
@@ -13454,11 +13458,17 @@ body .aurora--mini:before {
   box-shadow: none;
 }
 
+<<<<<<< HEAD
 /*
 .form-control.form-textarea {
   border: 1px solid #ccc;
 }
 */
+=======
+.form-control.form-textarea {
+  border: 1px solid #ccc;
+}
+>>>>>>> master
 
 #wb-srch form#search-form {
   position: relative;
