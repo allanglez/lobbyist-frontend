@@ -62,13 +62,27 @@
         "drupal/wxt_library": "^1.10",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
-        "drupal/telephone_formatter": "^1.0",
-        "drupal/telephone_validation": "^2.2",
+        "giggsey/libphonenumber-for-php": "^8.10",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "8.7.8",
         "zaporylie/composer-drupal-optimizations": "^1.0",
-        "drupal/mask": "^1.0"
+        "drupal/telephone_formatter": "^1.0",
+        "drupal/telephone_validation": "^2.2",
+        "drupal/mask": "^1.0",
+        "drupal/structure_sync": "^1.16",
+        "drupal/external_db_login": "^1.0",
+        "drupal/facets": "^1.4",
+        "drupal/field_group": "^3.0",
+        "drupal/fontawesome": "^2.14",
+        "drupal/hierarchical_multi_select": "^1.5",
+        "drupal/hierarchical_taxonomy_menu": "^1.37",
+        "drupal/link_attributes": "^1.9",
+        "drupal/quicktabs": "^3.0",
+        "drupal/rest_register_verify_email": "^1.0",
+        "drupal/select2": "^1.5",
+        "drupal/views_database_connector": "^1.1",
+        "drupal/views_fieldsets": "^3.3"
     },
     "require-dev": {
         "behat/behat": "3.*",
@@ -155,6 +169,17 @@
                 ".htaccess",
                 "web.config"
             ]
+        },
+        "enable-patching": true, 
+        "patchLevel":{
+          "drupal/core": "-p2"
+        },
+        "patches":{
+          "drupal/external_entities":{
+            "Support for Drupal Views Rest export":"https://www.drupal.org/files/issues/2018-09-09/2988391-views_rest_support.patch",
+            "Entity browser views support" :"https://www.drupal.org/files/issues/2018-09-09/2998394-views_entity_browser_support.patch",
+            "Theming support":"https://www.drupal.org/files/issues/2018-09-10/2998552-external_entities_theme_support.patch"
+          }
         }
     },
     "config": {

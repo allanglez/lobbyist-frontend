@@ -5,7 +5,7 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: ''
+  url: 'http://dev-lobbyist-frontend.pantheonsite.io/themes/contrib/bootstrap/favicon.ico'
   use_default: true
 features:
   comment_user_picture: true
@@ -16,3 +16,12 @@ logo:
   path: ''
   url: ''
   use_default: true
+table_responsive: '-1'
+tooltip_enabled: 0
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''

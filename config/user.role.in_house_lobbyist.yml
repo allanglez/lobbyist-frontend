@@ -11,4 +11,10 @@ id: in_house_lobbyist
 label: 'In-house lobbyist'
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access user profiles'
+  - 'access webform overview'
+  - 'view any webform submission'
+  - 'view own webform submission'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

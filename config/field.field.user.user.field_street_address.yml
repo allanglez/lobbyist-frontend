@@ -22,10 +22,10 @@ id: user.user.field_street_address
 field_name: field_street_address
 entity_type: user
 bundle: user
-label: 'STREET ADDRESS'
-description: 'WHAT IS YOUR MAILING ADDRESS?'
+label: 'Streer address'
+description: 'What is your mailing address?'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

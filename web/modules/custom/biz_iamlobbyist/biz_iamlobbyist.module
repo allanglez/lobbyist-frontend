@@ -90,7 +90,8 @@ function _lobbyist_finder_submit_page(array &$form, FormStateInterface $form_sta
   		($curent_values['are_you_option_4'] == 'Yes' && $current_page == 'page_6_5') || 
   		($curent_values['are_you_option_5'] == 'Yes' && $current_page == 'page_6_6') || 
   		($curent_values['are_you_option_6'] == 'Yes' && $current_page == 'page_7') || 
-  		($curent_values['are_you_option_12'] == 'Yes' && $current_page == 'page_8')) {
+  		($curent_values['are_you_option_12'] == 'Yes' && $current_page == 'page_8') || 
+  		($curent_values['select_one_option_5_1'] == 'Yes' && $current_page == 'page_6')) {
 	$page_name = 'page_8';
 	goto_step($page_name, $pages, $form_state);
   }
@@ -117,7 +118,7 @@ function _lobbyist_finder_prev_page(array &$form, FormStateInterface $form_state
 //   dsm($form_state);
 //   custom_reset($form, $form_state);
   //ToDo: We can clean values OR back to the last answered option
-  if ($current_page == 'page_7') {
+  if ($current_page == 'page_8') {
 	$page_name = 'page_5';
 	goto_step($page_name, $pages, $form_state);
     

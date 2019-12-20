@@ -6,8 +6,12 @@ global-styling:
       css/slick-theme.css: {}
       css/slick.css: {}
       css/lobbyist-finder.css: {}
+      css/select2.min.css: {}
   js:    
     js/registration-modal.js: {}
+    js/select2.full.min.js: {}
+    js/webforms-helptexts.js: {}
+    js/webforms-steps-confirm-check.js: {}
 fonts:
   css:
     theme:
@@ -29,6 +33,8 @@ fonts:
     js/sticky.min.js: {}
     js/custom-logic.js: {}
     js/slick.min.js: {}
+    js/select2.full.min.js: {}
+    
   dependencies:
     - core/jquery
 
@@ -40,5 +46,9 @@ drupal.wxt_bootstrap:
     - core/drupal
     - core/drupalSettings
     - wxt_bootstrap/framework
+select2.theme:
+  css:
+    component:
+      css/select2.min.css: {}
 
 

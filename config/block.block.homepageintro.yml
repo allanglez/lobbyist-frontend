@@ -13,7 +13,7 @@ dependencies:
 id: homepageintro
 theme: wxt_lobbyist
 region: header_slider
-weight: -9
+weight: -14
 provider: null
 plugin: 'block_content:79a7bd8a-b906-4560-aff8-28a67188ddc9'
 settings:
@@ -27,7 +27,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/*'
+    pages: '<front>'
     negate: false
     context_mapping: {  }
   panels_title:

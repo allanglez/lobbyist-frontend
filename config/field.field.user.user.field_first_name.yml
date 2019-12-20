@@ -21,10 +21,10 @@ id: user.user.field_first_name
 field_name: field_first_name
 entity_type: user
 bundle: user
-label: 'FIRST NAME'
-description: 'FIRST NAME'
+label: 'First name'
+description: 'First name'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

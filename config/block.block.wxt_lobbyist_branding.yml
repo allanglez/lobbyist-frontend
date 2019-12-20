@@ -12,7 +12,7 @@ _core:
 id: wxt_lobbyist_branding
 theme: wxt_lobbyist
 region: branding
-weight: -9
+weight: -12
 provider: null
 plugin: system_branding_block
 settings:

@@ -18,6 +18,7 @@ jQuery(document).ready(function($){
 		$(trigger_selector).on('click', 'input', function(event) {
 			if(
 				event.currentTarget.value == 'No' &&
+				$(page_selector).children().first().attr('data-webform-key') != 'page_5_1' &&
 				$(page_selector).children().first().attr('data-webform-key') != 'page_6' &&
 				$(page_selector).children().first().attr('data-webform-key') != 'page_6_1' &&
 				$(page_selector).children().first().attr('data-webform-key') != 'page_6_2' &&

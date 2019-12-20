@@ -13,7 +13,7 @@ _core:
 id: wxt_lobbyist_tools
 theme: wxt_lobbyist
 region: branding
-weight: -7
+weight: -10
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

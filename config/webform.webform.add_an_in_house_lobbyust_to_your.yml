@@ -9,15 +9,15 @@ uid: 1
 template: false
 archive: false
 id: add_an_in_house_lobbyust_to_your
-title: 'ADD AN IN-HOUSE LOBBYUST TO YOUR ORGANIZATION'
+title: 'Add an in-house lobbyist to your organization'
 description: "In-House lobbyist lobby on behalf of an organization as an emproyee, CEO, partner, exective director, board member, etc.&nbsp;<br />\r\n<br />\r\nClick here for definition of in-house lobbyist."
 category: ''
-elements: "processed_text:\n  '#type': processed_text\n  '#text': |\n    <p>In-House lobbyist lobby on behalf of an organization as an emproyee, CEO, partner, exective director, board member, etc.&nbsp;</p>\n    \n    <p>Click here for definition of in-house lobbyist.</p>\n    \n  '#format': basic_html\nprocessed_text_01:\n  '#type': processed_text\n  '#text': |\n    <p>IN-HOUSE LOBBYIST INFORMATION</p>\n    \n  '#format': basic_html\nfirst_name:\n  '#type': textfield\n  '#title': 'FIRST NAME'\nlast_name:\n  '#type': textfield\n  '#title': 'LAST NAME'\nposition:\n  '#type': textfield\n  '#title': POSITION\ncontact_information:\n  '#type': processed_text\n  '#text': |\n    <p>CONTACT INFORMATION</p>\n    \n  '#format': basic_html\ne_mail_address:\n  '#type': webform_email_confirm\n  '#title': 'E-MAIL ADDRESS'\n  '#description_display': after\n  '#confirm__title': 'CONFIRM YOUR EMAIL ADDRESS'\n  '#confirm__description': 'A confirmation message will be sent to this e-mail address once your account is created.'\ntelephone:\n  '#type': tel\n  '#title': TELEPHONE\n  '#international': true\n  '#international_initial_country': CA\n  '#international_preferred_countries': {  }\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'CREATE ACCOUNT'"
+elements: "'#attributes':\n  class:\n    - relative\nupdate_organization_action:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - organization-form\n  '#text': |\n    <div class=\"organization\">\n    <div class=\"col-xs-6 no-padding\">\n    <p><strong>Organization</strong></p>\n    </div>\n    \n    <div class=\"col-xs-6 no-padding update-action\"><a class=\"update-action\" href=\"update-user\">Edit organization</a></div>\n    </div>\n    \n  '#format': full_html\norganization_header:\n  '#type': processed_text\n  '#format': full_html\nprocessed_text:\n  '#type': processed_text\n  '#text': |\n    <p>In-House lobbyist lobby on behalf of an organization as an emproyee, CEO, partner, exective director, board member, etc.&nbsp;</p>\n    \n    <p><a href=\"&lt;front&gt;\">Click here for definition of in-house lobbyist.</a></p>\n    \n  '#format': basic_html\nprocessed_text_01:\n  '#type': processed_text\n  '#text': |\n    <p>In-house&nbsp;lobbyist information</p>\n    \n  '#format': basic_html\nfirst_name:\n  '#type': textfield\n  '#title': 'First name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last name'\nposition:\n  '#type': textfield\n  '#title': Position\ncontact_information:\n  '#type': processed_text\n  '#text': |\n    <p>Contact information</p>\n    \n  '#format': basic_html\ne_mail_address:\n  '#type': webform_email_confirm\n  '#title': 'E-mail address'\n  '#description_display': after\n  '#confirm__title': 'Confirm your email address'\n  '#confirm__description': 'A confirmation message will be sent to this e-mail address once your account is created.'\ntelephone:\n  '#type': tel\n  '#title': Telephone\n  '#international': true\n  '#international_initial_country': CA\n  '#international_preferred_countries': {  }\nstatus:\n  '#type': select\n  '#title': Status\n  '#options':\n    active: Active\n    blocked: Blocked\n  '#default_value': active\n  '#wrapper_attributes':\n    class:\n      - no-display\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Finish\n  '#submit__attributes':\n    class:\n      - 'purple-button hidden'\n  '#preview_prev__label': 'Edit details'\n  '#preview_next__label': 'Continue to next step'\nprocessed_text_02:\n  '#type': processed_text\n  '#text': |\n    <p><a href=\"/add_an_in_house_lobbyust_to_your\">Add additional In-house lobbyist to the organization</a></p>\n    \n  '#format': basic_html\nprocessed_text_03:\n  '#type': processed_text\n  '#text': |\n    <p><a href=\"&lt;front&gt;\">Add lobbying activity</a></p>\n    \n  '#format': basic_html\nprocessed_text_04:\n  '#type': processed_text\n  '#text': |\n    <p><a href=\"&lt;front&gt;\">Return to organization account</a></p>\n    \n  '#format': basic_html"
 css: ''
 javascript: ''
 settings:
   ajax: false
-  ajax_scroll_top: form
+  ajax_scroll_top: ''
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
@@ -25,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_admin_theme: false
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -74,7 +74,7 @@ settings:
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
-  wizard_progress_bar: true
+  wizard_progress_bar: false
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
@@ -84,7 +84,7 @@ settings:
   wizard_confirmation: true
   wizard_confirmation_label: ''
   wizard_track: ''
-  preview: 0
+  preview: 2
   preview_label: ''
   preview_title: ''
   preview_message: ''
@@ -99,10 +99,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: ''
-  confirmation_url: ''
+  confirmation_message: "The lobbyist has been saved in your organization.<br />\r\n<br />\r\n&nbsp;"
+  confirmation_url: /in-house-account-home
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -124,7 +124,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   token_update: false
 access:
@@ -174,4 +174,33 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  remote_post:
+    id: remote_post
+    label: remote_new_in_house_organization
+    handler_id: remote_post
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      method: POST
+      type: json
+      excluded_data: {  }
+      custom_data: ''
+      custom_options: ''
+      debug: false
+      completed_url: 'http://pr-14-lobbyist-frontend.pantheonsite.io/webform_rest/submit'
+      completed_custom_data: ''
+      updated_url: ''
+      updated_custom_data: ''
+      deleted_url: ''
+      deleted_custom_data: ''
+      draft_created_url: ''
+      draft_created_custom_data: ''
+      draft_updated_url: ''
+      draft_updated_custom_data: ''
+      converted_url: ''
+      converted_custom_data: ''
+      message: ''
+      messages: {  }
+      error_url: ''

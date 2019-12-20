@@ -13,7 +13,6 @@ favicon:
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
 wxt_gcweb_cdn_footer_url: ''
-table_responsive: '-1'
 region_wells:
   branding: ''
   navbar: ''
@@ -21,9 +20,11 @@ region_wells:
   search_bar: ''
   site_alert: ''
   highlighted: ''
+  header_slider: ''
   header: ''
   help: ''
   inline_arlert: ''
+  content_slider: ''
   content: ''
   page_form: ''
   sidebar: ''
@@ -32,19 +33,16 @@ region_wells:
   footer_top: ''
   footer: ''
 cdn_provider: jsdelivr
-cdn_theme: bootstrap
-cdn_cache_ttl_versions: '604800'
-cdn_cache_ttl_themes: '604800'
-cdn_cache_ttl_assets: '0'
-cdn_cache_ttl_library: '0'
-reset_http_request_cache: ''
-table: ''
 logo:
   path: 'public://Screen Shot 2019-11-01 at 1.18.59 PM_0.png'
   url: ''
   use_default: false
+forms_has_error_value_toggle: 1
+forms_smart_descriptions: 0
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
+reset_http_request_cache: ''
+table: ''

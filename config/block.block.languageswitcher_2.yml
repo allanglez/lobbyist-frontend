@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher_2
 theme: wxt_lobbyist
 region: navigation
-weight: -8
+weight: -11
 provider: null
 plugin: 'wxt_language_block:language_interface'
 settings:

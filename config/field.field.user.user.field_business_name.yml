@@ -14,17 +14,17 @@ third_party_settings:
       authenticated: 0
       in_house_lobbyist: 0
     user_additional_register_form_required:
-      consultant_lobbyist: consultant_lobbyist
       authenticated: 0
       in_house_lobbyist: 0
+      consultant_lobbyist: 0
 id: user.user.field_business_name
 field_name: field_business_name
 entity_type: user
 bundle: user
-label: 'BUSINESS NAME'
-description: 'BUSINESS NAME (IF APPLICABLE)'
+label: 'Business name'
+description: 'Business name (If applicable)'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

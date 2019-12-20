@@ -21,10 +21,10 @@ id: user.user.field_last_name_consultant_
 field_name: field_last_name_consultant_
 entity_type: user
 bundle: user
-label: 'LAST NAME (Consultant)'
-description: 'LAST NAME (Consultant)'
+label: 'Last name'
+description: 'This is the last name of the consultant'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

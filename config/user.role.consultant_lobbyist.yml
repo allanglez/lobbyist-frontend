@@ -11,4 +11,10 @@ id: consultant_lobbyist
 label: 'Consultant lobbyist'
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access user profiles'
+  - 'access webform overview'
+  - 'view any webform submission'
+  - 'view own webform submission'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

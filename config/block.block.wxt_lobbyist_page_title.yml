@@ -9,7 +9,7 @@ _core:
 id: wxt_lobbyist_page_title
 theme: wxt_lobbyist
 region: content
-weight: -9
+weight: -13
 provider: null
 plugin: page_title_block
 settings:

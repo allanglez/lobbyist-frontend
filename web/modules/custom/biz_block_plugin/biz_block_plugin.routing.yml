@@ -1,0 +1,7 @@
+biz_block_plugin.settings:
+  path: '/admin/config/bizont-dashbodard/settings'
+  defaults:
+    _form: '\Drupal\biz_block_plugin\Form\DashboardsSettingsForm'
+    _title: 'Dashboard Lobbyist Settings'
+  requirements:
+    _permission: 'administer site configuration'

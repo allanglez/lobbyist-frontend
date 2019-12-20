@@ -19,10 +19,10 @@ id: user.user.field_telephone
 field_name: field_telephone
 entity_type: user
 bundle: user
-label: TELEPHONE
+label: Telephone
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

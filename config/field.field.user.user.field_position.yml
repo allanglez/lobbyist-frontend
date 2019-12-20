@@ -21,10 +21,10 @@ id: user.user.field_position
 field_name: field_position
 entity_type: user
 bundle: user
-label: POSITION
-description: POSITION
+label: Position
+description: Position
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

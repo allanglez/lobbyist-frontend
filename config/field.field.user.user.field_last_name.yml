@@ -21,10 +21,10 @@ id: user.user.field_last_name
 field_name: field_last_name
 entity_type: user
 bundle: user
-label: 'LAST NAME'
-description: 'LAST NAME'
+label: 'Last name'
+description: 'Last name'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
