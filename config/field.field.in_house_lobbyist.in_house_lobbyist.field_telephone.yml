@@ -1,0 +1,20 @@
+uuid: 5e2a2a5a-6de9-4da4-8dc2-6b914006305a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.in_house_lobbyist.field_telephone
+  module:
+    - external_entities
+id: in_house_lobbyist.in_house_lobbyist.field_telephone
+field_name: field_telephone
+entity_type: in_house_lobbyist
+bundle: in_house_lobbyist
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

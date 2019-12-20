@@ -1,0 +1,20 @@
+uuid: 1375361d-96f5-42f0-821a-a36cfb63d465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_end_date
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_end_date
+field_name: field_end_date
+entity_type: consultant_activity
+bundle: consultant_activity
+label: 'End date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

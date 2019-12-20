@@ -1,0 +1,21 @@
+uuid: 28586453-0ee7-4c67-9b66-21c8ff87b46e
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_activity.field_was_the_grant_awarded_rela
+field_name: field_was_the_grant_awarded_rela
+entity_type: in_house_activity
+type: string
+settings:
+  max_length: 1024
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

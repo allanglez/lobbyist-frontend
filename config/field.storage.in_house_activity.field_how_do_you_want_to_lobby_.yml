@@ -1,0 +1,21 @@
+uuid: 8145705b-e1ab-4235-8476-0c70e377be2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_activity.field_how_do_you_want_to_lobby_
+field_name: field_how_do_you_want_to_lobby_
+entity_type: in_house_activity
+type: string
+settings:
+  max_length: 1024
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

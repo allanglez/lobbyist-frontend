@@ -1,0 +1,20 @@
+uuid: 59d04348-56c6-4334-b585-991b020667dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_user_email
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_user_email
+field_name: field_user_email
+entity_type: consultant_activity
+bundle: consultant_activity
+label: 'User email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

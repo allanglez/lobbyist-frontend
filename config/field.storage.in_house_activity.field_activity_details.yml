@@ -1,0 +1,19 @@
+uuid: 0a1ab665-2fd2-4603-adfc-c48c33a91c2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_activity.field_activity_details
+field_name: field_activity_details
+entity_type: in_house_activity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

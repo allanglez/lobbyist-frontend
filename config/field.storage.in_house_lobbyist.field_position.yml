@@ -1,0 +1,21 @@
+uuid: abec9a9e-0e92-4dbf-9ab1-ad95b1f6609b
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_lobbyist.field_position
+field_name: field_position
+entity_type: in_house_lobbyist
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 520fcd06-f47c-4637-bbde-cf5cd8817f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.in_house_lobbyist.field_position
+  module:
+    - external_entities
+id: in_house_lobbyist.in_house_lobbyist.field_position
+field_name: field_position
+entity_type: in_house_lobbyist
+bundle: in_house_lobbyist
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

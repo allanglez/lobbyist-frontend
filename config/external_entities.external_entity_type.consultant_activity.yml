@@ -1,0 +1,61 @@
+uuid: 1111cc37-f6ac-497a-a6e1-af05f553f849
+langcode: en
+status: true
+dependencies: {  }
+id: consultant_activity
+label: 'Consultant Activity'
+label_plural: 'Consultant Activities'
+description: ''
+read_only: true
+field_mappings:
+  id:
+    value: sid
+  uuid:
+    value: uuid
+  title:
+    value: title
+  field_add_details_about_your_lob:
+    value: activity_details
+  field_email:
+    value: email
+  field_end_date:
+    value: end_date
+  field_last_updated:
+    value: last_updated
+  field_org_name:
+    value: org_name
+  field_s:
+    value: start_date
+  field_status:
+    value: status
+  field_telephone:
+    value: telephone
+  field_user_email:
+    value: user_email
+  field_view_link:
+    value: view_link
+storage_client_id: rest
+storage_client_config:
+  endpoint: 'http://pr-14-lobbyist-frontend.pantheonsite.io/api/consultant-lobbying-activities'
+  response_format: json
+  pager:
+    default_limit: '50'
+    page_parameter: ''
+    page_parameter_type: null
+    page_size_parameter: ''
+    page_size_parameter_type: null
+  single_response_in_array: true
+  api_key:
+    header_name: ''
+    key: ''
+  parameters:
+    list:
+      _format: json
+    single:
+      _format: json
+persistent_cache_max_age: 0
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
+inherits_annotation_fields: false
+themeable: true

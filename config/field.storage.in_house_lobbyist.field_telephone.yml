@@ -1,0 +1,21 @@
+uuid: e35b9eef-f8cf-46d4-93be-fc06c020093d
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_lobbyist.field_telephone
+field_name: field_telephone
+entity_type: in_house_lobbyist
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

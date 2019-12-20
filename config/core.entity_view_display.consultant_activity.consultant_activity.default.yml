@@ -1,0 +1,111 @@
+uuid: 87e57243-2c6a-402d-b15c-edde5dc2f654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.consultant_activity.consultant_activity.field_add_details_about_your_lob
+    - field.field.consultant_activity.consultant_activity.field_email
+    - field.field.consultant_activity.consultant_activity.field_end_date
+    - field.field.consultant_activity.consultant_activity.field_last_updated
+    - field.field.consultant_activity.consultant_activity.field_org_name
+    - field.field.consultant_activity.consultant_activity.field_s
+    - field.field.consultant_activity.consultant_activity.field_status
+    - field.field.consultant_activity.consultant_activity.field_telephone
+    - field.field.consultant_activity.consultant_activity.field_user_email
+    - field.field.consultant_activity.consultant_activity.field_view_link
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.default
+targetEntityType: consultant_activity
+bundle: consultant_activity
+mode: default
+content:
+  field_add_details_about_your_lob:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_email:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_end_date:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_updated:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_org_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_s:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_status:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user_email:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_view_link:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  title:
+    type: string
+    label: hidden
+    region: content
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,111 @@
+uuid: 9b40041e-3caf-4106-b114-dd083564626b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.consultant_activity.consultant_activity.field_add_details_about_your_lob
+    - field.field.consultant_activity.consultant_activity.field_email
+    - field.field.consultant_activity.consultant_activity.field_end_date
+    - field.field.consultant_activity.consultant_activity.field_last_updated
+    - field.field.consultant_activity.consultant_activity.field_org_name
+    - field.field.consultant_activity.consultant_activity.field_s
+    - field.field.consultant_activity.consultant_activity.field_status
+    - field.field.consultant_activity.consultant_activity.field_telephone
+    - field.field.consultant_activity.consultant_activity.field_user_email
+    - field.field.consultant_activity.consultant_activity.field_view_link
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.default
+targetEntityType: consultant_activity
+bundle: consultant_activity
+mode: default
+content:
+  field_add_details_about_your_lob:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_email:
+    weight: -1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_end_date:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_updated:
+    weight: -3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_org_name:
+    weight: -2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_s:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_status:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_user_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_link:
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

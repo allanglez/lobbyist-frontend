@@ -1,0 +1,57 @@
+uuid: bd18ff6e-29e5-43fa-9e81-ac4871b869f4
+langcode: en
+status: true
+dependencies: {  }
+id: in_house_activity
+label: 'In-house activity'
+label_plural: 'In-house activities'
+description: ''
+read_only: true
+field_mappings:
+  id:
+    value: sid
+  uuid:
+    value: uuid
+  title:
+    value: title
+  field_activity_details:
+    value: activity_details
+  field_as_your_organization_recei:
+    value: recived_grant
+  field_how_do_you_want_to_lobby_:
+    value: how_want_lobby
+  field_status:
+    value: status
+  field_topic:
+    value: topic_term
+  field_user_email:
+    value: user_email
+  field_was_the_grant_awarded_rela:
+    value: was_grant
+  field_who_are_you_lobbying_or_pl:
+    value: who_lobbying_plan
+storage_client_id: rest
+storage_client_config:
+  endpoint: 'http://pr-14-lobbyist-frontend.pantheonsite.io/api/in-house-lobbying-activities'
+  response_format: json
+  pager:
+    default_limit: '50'
+    page_parameter: ''
+    page_parameter_type: null
+    page_size_parameter: ''
+    page_size_parameter_type: null
+  single_response_in_array: true
+  api_key:
+    header_name: ''
+    key: ''
+  parameters:
+    list:
+      _format: json
+    single:
+      _format: json
+persistent_cache_max_age: 0
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
+inherits_annotation_fields: false
+themeable: true

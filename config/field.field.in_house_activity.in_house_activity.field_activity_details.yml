@@ -1,0 +1,20 @@
+uuid: 1e340f78-c0cb-475f-ae98-1d865e83db1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.in_house_activity.field_activity_details
+  module:
+    - external_entities
+id: in_house_activity.in_house_activity.field_activity_details
+field_name: field_activity_details
+entity_type: in_house_activity
+bundle: in_house_activity
+label: 'Activity details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

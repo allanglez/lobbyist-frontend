@@ -1,0 +1,28 @@
+uuid: daa328f6-fe75-4aa9-a270-bb099263289f
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.default_server
+  module:
+    - search_api
+    - external_entities
+id: in_house_lobbyist
+name: 'In-house lobbyist'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:in_house_lobbyist': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server

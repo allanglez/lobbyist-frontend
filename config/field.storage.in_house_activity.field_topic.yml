@@ -1,0 +1,21 @@
+uuid: e32aa917-72ac-4478-a402-b016f4343095
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: in_house_activity.field_topic
+field_name: field_topic
+entity_type: in_house_activity
+type: string
+settings:
+  max_length: 1024
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

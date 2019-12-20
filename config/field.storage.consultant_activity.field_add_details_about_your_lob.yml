@@ -1,0 +1,19 @@
+uuid: 85d950df-e0a6-4a2f-8ea8-239628e5d927
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: consultant_activity.field_add_details_about_your_lob
+field_name: field_add_details_about_your_lob
+entity_type: consultant_activity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

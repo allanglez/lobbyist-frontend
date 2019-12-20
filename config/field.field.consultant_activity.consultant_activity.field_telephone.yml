@@ -1,0 +1,20 @@
+uuid: 232d3d8e-cb7a-4b95-87c9-fbabf07efa30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_telephone
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_telephone
+field_name: field_telephone
+entity_type: consultant_activity
+bundle: consultant_activity
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

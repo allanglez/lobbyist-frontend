@@ -1,0 +1,93 @@
+uuid: e2284c6f-acb3-4871-87f9-d7afb81e3e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.in_house_activity.in_house_activity.field_activity_details
+    - field.field.in_house_activity.in_house_activity.field_as_your_organization_recei
+    - field.field.in_house_activity.in_house_activity.field_how_do_you_want_to_lobby_
+    - field.field.in_house_activity.in_house_activity.field_status
+    - field.field.in_house_activity.in_house_activity.field_topic
+    - field.field.in_house_activity.in_house_activity.field_user_email
+    - field.field.in_house_activity.in_house_activity.field_was_the_grant_awarded_rela
+    - field.field.in_house_activity.in_house_activity.field_who_are_you_lobbying_or_pl
+  module:
+    - external_entities
+id: in_house_activity.in_house_activity.default
+targetEntityType: in_house_activity
+bundle: in_house_activity
+mode: default
+content:
+  field_activity_details:
+    weight: -1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_as_your_organization_recei:
+    weight: -2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_how_do_you_want_to_lobby_:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_status:
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topic:
+    weight: -3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_user_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_was_the_grant_awarded_rela:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_who_are_you_lobbying_or_pl:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

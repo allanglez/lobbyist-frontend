@@ -1,0 +1,20 @@
+uuid: 1c65a056-640e-48e0-a0e9-218644e20693
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.in_house_lobbyist.field_user_email
+  module:
+    - external_entities
+id: in_house_lobbyist.in_house_lobbyist.field_user_email
+field_name: field_user_email
+entity_type: in_house_lobbyist
+bundle: in_house_lobbyist
+label: 'User Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

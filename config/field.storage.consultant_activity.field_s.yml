@@ -1,0 +1,21 @@
+uuid: a02b7860-ae93-44d5-b31b-02abec9d8011
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: consultant_activity.field_s
+field_name: field_s
+entity_type: consultant_activity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: d2b2b01c-7299-4312-8d49-f4e92f5966a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.consultant_activity.field_add_details_about_your_lob
+  module:
+    - external_entities
+id: consultant_activity.consultant_activity.field_add_details_about_your_lob
+field_name: field_add_details_about_your_lob
+entity_type: consultant_activity
+bundle: consultant_activity
+label: "ADD DETAILS ABOUT YOUR LOBBYING ACTIVITY (OPTIONAL)\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
