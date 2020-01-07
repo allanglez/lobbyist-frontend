@@ -68,7 +68,10 @@ function wxt_lobbyist_theme_suggestions_node_alter(array &$suggestions,
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function wxt_lobbyist_preprocess_block(array &$variables) {
-
+  //if($variables['attributes']['id'] == 'block-name') {
+    //-- This stops the block being cache in drupal 8
+    $variables['#cache']['max-age'] = 0;
+  //}
 }
 
 /**
@@ -155,3 +158,5 @@ function wxt_lobbyist_preprocess_menu_local_task(array &$variables) {
   // $variables['element']['#link']['url']->
   // setOption('attributes', ['class'=>'rounded']);
 }
+
+

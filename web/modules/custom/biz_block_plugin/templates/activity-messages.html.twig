@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ *
+ * Available variables:
+ * - 
+ * - submitted: Submission information created from author and created
+ *   during template_preprocess_comment().
+ * - status: Comment status. Possible values are:
+ *   unpublished, published, or preview.
+ *
+ * @see template_preprocess_comment()
+ */
+#}
+<div>
+  <div class="info-container gray-info-container activity-comment">
+    <div class= "row">
+      <div class= "col-md-6">
+        <strong>FROM:  {{ user_name }}</strong>
+      </div>
+      <div class= "col-md-6">
+          <strong>{{ date }}</strong>
+      </div>
+    </div>
+    <div class= "">
+      {{ message| raw  }}
+    </div>
+  </div>
+</div>
