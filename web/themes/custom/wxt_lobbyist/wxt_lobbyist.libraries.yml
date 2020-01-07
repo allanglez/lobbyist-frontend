@@ -5,6 +5,19 @@ global-styling:
       css/style_yukon.css: {}
       css/slick-theme.css: {}
       css/slick.css: {}
+      css/lobbyist-finder.css: {}
+      css/select2.min.css: {}
+      css/jquery.dataTables.css: {}
+  js:    
+    js/registration-modal.js: {}
+    js/select2.full.min.js: {}
+    js/webforms-helptexts.js: {}
+    js/webforms-steps-confirm-check.js: {}
+    js/jquery.dataTables.min.js: {}
+fonts:
+  css:
+    theme:
+      "//fonts.googleapis.com/css?family=Open+Sans:400,500,600,800,900": {external:true}
   js:
     # js/bootstrap/affix.js: {}
     js/bootstrap/alert.js: {}
@@ -12,7 +25,7 @@ global-styling:
     # js/bootstrap/carousel.js: {}
     js/bootstrap/collapse.js: {}
     js/bootstrap/dropdown.js: {}
-    js/bootstrap/modal.js: {}
+#     js/bootstrap/modal.js: {}
     js/bootstrap/tooltip.js: {}
     js/bootstrap/popover.js: {}
     # js/bootstrap/scrollspy.js: {}
@@ -22,6 +35,8 @@ global-styling:
     js/sticky.min.js: {}
     js/custom-logic.js: {}
     js/slick.min.js: {}
+    js/select2.full.min.js: {}
+    
   dependencies:
     - core/jquery
 
@@ -33,5 +48,9 @@ drupal.wxt_bootstrap:
     - core/drupal
     - core/drupalSettings
     - wxt_bootstrap/framework
+select2.theme:
+  css:
+    component:
+      css/select2.min.css: {}
 
 

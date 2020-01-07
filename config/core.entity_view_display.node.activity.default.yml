@@ -1,0 +1,30 @@
+uuid: a77a9caa-4bf8-4980-a0ce-354f7431e09b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.activity.body
+    - node.type.activity
+  module:
+    - text
+    - user
+id: node.activity.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
