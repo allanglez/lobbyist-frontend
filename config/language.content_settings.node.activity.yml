@@ -1,0 +1,11 @@
+uuid: 30780978-28e2-4ff0-a92f-a2f051995146
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.activity
+id: node.activity
+target_entity_type_id: node
+target_bundle: activity
+default_langcode: site_default
+language_alterable: false

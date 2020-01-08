@@ -24,6 +24,11 @@
       </div>
     </div>
   </header>
+{% if page.header_slider %}
+  <div class="header_slider" role="header_slider">
+      {{ page.header_slider }}
+  </div>
+{% endif %}
 
   {% endblock %}
 {% endif %}
@@ -36,7 +41,6 @@
       <div class="highlighted">{{ page.highlighted }}</div>
     {% endblock %}
   {% endif %}
-
   {# Content #}
     {%
       set content_classes = [
@@ -75,6 +79,12 @@
     {% endblock %}
   {% endif %}
 
+  {% if page.content_slider %}
+    <div class="content_slider" role="content_slider">
+        {{ page.content_slider }}
+    </div>
+  {% endif %}
+  
   <main role="main" property="mainContentOfPage" {{ content_attributes.addClass(content_classes, 'main-container', 'js-quickedit-main-content') }}>
     {# Content #}
     <div class="main-content-wrap container">
