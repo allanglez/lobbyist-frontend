@@ -121,7 +121,6 @@ function _lobbyist_finder_submit_page(array &$form, FormStateInterface $form_sta
 
 function _lobbyist_finder_prev_page(array &$form, FormStateInterface $form_state) {
   // Conditional logic goes here.
-
   $curent_values = $form_state->getValues();
   $pages = $form_state->get('pages');
   $webform_submission = $form_state->getFormObject()->getEntity();

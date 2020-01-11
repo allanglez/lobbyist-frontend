@@ -6,7 +6,7 @@ definitions:
     weight: 0
     expanded: false
   user__page:
-    weight: -48
+    weight: -49
     menu_name: account
     parent: ''
     expanded: false

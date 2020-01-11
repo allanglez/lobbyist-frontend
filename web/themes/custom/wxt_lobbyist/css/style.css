@@ -1740,6 +1740,9 @@ body.administrator .user-form .form-item-contact,
 body.administrator .user-form .form-item-timezone{
   display: block;
 }
+.password-suggestions.description{
+  padding-left: 14px;
+  font-size: 12px;
 
 
 /* GENERAL REVIEW WEBFORM */

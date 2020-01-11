@@ -57,7 +57,6 @@ class RegistrationSettingsForm extends ConfigFormBase {
       '#title' => $this->t('URL API for create account'),
       '#default_value' => $config->get('consultant_lobbyist_welcome_mail'),
     ];
-
     $form['base_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('BaseURL'),
