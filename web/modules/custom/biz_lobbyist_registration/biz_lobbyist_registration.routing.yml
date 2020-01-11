@@ -1,0 +1,7 @@
+biz_lobbyist_registration.settings:
+  path: '/admin/structure/biz_lobbyist_registration/settings'
+  defaults:
+    _form: '\Drupal\biz_lobbyist_registration\Form\RegistrationSettingsForm'
+    _title: 'Lobbyist Registration Settings'
+  requirements:
+    _permission: 'administer site configuration'
