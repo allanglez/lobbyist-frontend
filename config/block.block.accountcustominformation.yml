@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - biz_block_plugin
     - system
     - wxt_library
   theme:
@@ -11,7 +10,7 @@ dependencies:
 id: accountcustominformation
 theme: wxt_lobbyist
 region: content
-weight: -8
+weight: -11
 provider: null
 plugin: account_custom_info_block
 settings:

@@ -14,6 +14,9 @@ is_admin: null
 permissions:
   - 'access user profiles'
   - 'access webform overview'
+  - 'administer private_message display'
+  - 'administer private_message_thread display'
+  - 'edit consultant activity'
   - 'view any webform submission'
   - 'view own webform submission'
   - 'view webform submissions any node'

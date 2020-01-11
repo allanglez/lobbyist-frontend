@@ -7,9 +7,9 @@ _core:
   default_config_hash: mO7mxem0JY6zvAroR3ebmv8PCghq7rhAHpmoBlTnb9o
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'http://pr-10-lobbyist-frontend.pantheonsite.io/themes/contrib/wxt_bootstrap/favicon.ico'
-  use_default: true
+  path: 'public://favicon.ico'
+  url: 'http://dev-lobbyist-frontend.pantheonsite.io/sites/default/files/favicon-2.ico'
+  use_default: false
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
 wxt_gcweb_cdn_footer_url: ''
@@ -37,7 +37,6 @@ logo:
   path: 'public://Screen Shot 2019-11-01 at 1.18.59 PM_0.png'
   url: ''
   use_default: false
-forms_has_error_value_toggle: 1
 forms_smart_descriptions: 0
 features:
   comment_user_picture: true

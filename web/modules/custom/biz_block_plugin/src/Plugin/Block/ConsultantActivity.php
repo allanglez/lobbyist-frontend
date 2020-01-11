@@ -20,105 +20,79 @@
  * )
  */
   class ConsultantActivity extends BlockBase implements BlockPluginInterface{
-
-    /**
-     * {@inheritdoc}
-    */
-    public function build() {
-      $email = \Drupal::currentUser()->getEmail();
-      $activity_format_endpoint = \Drupal::config('biz_block_plugin.settings')->get('consultant_activity_format');
-      $activity_endpoint = \Drupal::config('biz_block_plugin.settings')->get('consultant_activity');
-      $param = \Drupal::request()->query->all();
-      $id = "0" ;
-      if(isset($param['id'])){
-        $id = $param['id'];
-      }
-      $activity_response = GeneralFunctions::getSubmission($activity_endpoint, $id);
-      $activity_data = json_decode($activity_response['message']);
-      $activity_data = $activity_data[0];
-      $activity_email = isset($activity_data->mail) ? $activity_data->mail : "";
-      $url = \Drupal::config('biz_lobbyist_registration.settings')->get('base_url') . '/json/user/' . $activity_email;
-      $get_organization = BizWebformController::get_endpoint($url, [], "GET", []);
-      if($get_organization['code'] !== 400){
-    
-        if($email === $activity_email){
-          $edit_organization = '<a class="update-action" href="user/' . \Drupal::currentUser()->id() . '/edit">' .   t('Edit organization') .'</a>';
-        }
-        $organization = json_decode($get_organization["message"])[0];
-        $update_organization_action= '<div class="organization info-organization">'
-            .   '<div class="col-xs-6 no-padding">'
-            .     '<p><strong>' .   t('Consultant lobbyist') .'</strong></p>'
-            .   '</div>'
-            .   '<div class="col-xs-6 no-padding update-action">'
-            .     $edit_organization
-            .   '</div>'
-            . '</div>';
-          $content []= array('#type' =>'markup','#markup'  => $update_organization_action);
-          $organization_header = '<div class="header-view info-organization">'
-            .    '<div class="header-row no-padding row col-xs-12">'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Name') . '</p>' 
-            .        '<p>' .  t($organization->consultant_name) . '</p>'
-            .      '</div>'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Business name') . '</p> '
-            .        '<p>' .  t($organization->field_business_name) . '</p>'
-            .      '</div>'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title"></p>'
-            .        '<p></p>'
-            .      '</div>'
-            .    '</div>'
-            .    '<div class="header-row no-padding row col-xs-12">'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Address') . '</p> '
-            .        '<p>' .  t($organization->field_street_address_address_line1) . '</p>'
-            .      '</div>'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('City or town') . '</p> '
-            .        '<p>' .  t($organization->field_street_address_locality) . '</p>'
-            .      '</div>'
-            .    '</div>'
-          .    '<div class="header-row no-padding row col-xs-12">'
-          .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Territory, province or state') . '</p> '
-            .        '<p>' .  t($organization->field_street_address_administrative_area) . '</p>'
-            .      '</div>'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Zip code') . '</p> '
-            .        '<p>' . t( $organization->field_street_address_postal_code) . '</p>'
-            .      '</div>'
-            .      '<div class="field col no-padding align-self-start col-xs-4">'
-            .        '<p class="field-title">' . t('Country') . '</p> '
-            .        '<p>' . t($organization->field_street_address_country_code) . '</p>'
-            .      '</div>'
-            .    '</div>'
-            .  '</div>';
-          $content[] = array( '#type' => 'markup', '#markup'  => $organization_header);
-      }
-
-      if(!empty($activity_data)){
-        $base_href = '/consultant-add-activity-edit?';
-        foreach($activity_data as $field => $value) { 
-            $base_href .=  $field . '=' . $value . '&'; 
-        }
-        $edit_activity = "";
-        if($email === $activity_email){
-          $edit_activity = '<a class="update-action" href="{{custom_href}}">' .   t('Edit activity') .'</a>';
-          $edit_activity = str_replace('{{custom_href}}', $base_href, $edit_activity);  
-        }
-        $activity_format_endpoint = str_replace('{{edit_activity_link}}', $edit_activity, $activity_format_endpoint);
-        foreach($activity_data as $field => $value) {
-          $activity_format_endpoint = str_replace('{{'. $field .'}}', $value, $activity_format_endpoint); 
-        }
-        $content[] = array('#type' => 'markup', '#markup'  => $activity_format_endpoint);
-        return $content;
-      }
-    }
     
     public function getCacheMaxAge() {
       // If you want to disable caching for this block.
       return 0;
     }
+    /**
+     * {@inheritdoc}
+    */
+    public function build() {
+      $current_user = \Drupal::currentUser();
+      $email = $current_user->getEmail();
+      $roles = $current_user->getRoles();
+      $base_url =  \Drupal::config('biz_lobbyist_registration.settings')->get('base_url');
+      $edit_activity = "";
+      $edit_organization = "";
+      $organization = [];
+      $activity_data = [];
+      $activity_endpoint = \Drupal::config('biz_block_plugin.settings')->get('consultant_activity');
+      //Get all query params
+      $param = \Drupal::request()->query->all();
+      //Get activity ID
+      $id = isset($param['id']) ? $param['id'] : "0";
+      //Get activity data
+      $activity_response = GeneralFunctions::getSubmission($activity_endpoint, $id);
+      if($activity_response['code'] !== 400){
+        $activity_data = isset(json_decode($activity_response['message'])[0]) ? json_decode($activity_response['message'])[0] : [];
+      }      
+      $activity_email = isset($activity_data->mail) ? $activity_data->mail : "";
+      //Generate the URL for get backend user information
+      $url = $base_url . \Drupal::config('biz_lobbyist_registration.settings')->get('json_path') . $activity_email;
+      //Get organization data
+      $get_organization = BizWebformController::get_endpoint($url, [], "GET", []);
+      if($get_organization['code'] !== 400){
+        $organization = isset(json_decode($get_organization['message'])[0]) ? json_decode($get_organization['message'])[0] : [];
+      }
+      $editable = ($email === $activity_email ||  in_array("role_administrator", $roles)) ? TRUE : FALSE;
+      
+      //Check if the user is the owner activity
+      if($email === $activity_email ){
+        $edit_organization = '/user/' . \Drupal::currentUser()->id() . '/edit';
+      }
+      
+      
+      if(!empty($activity_data) && ($editable)){
+        $base_href = '/consultant-account-home/consultant-activity-view/consultant-add-activity-edit?org=' . $id .'&';
+        foreach($activity_data as $field => $value) { 
+            $base_href .=  $field . '=' . $value . '&'; 
+        }
+       $edit_activity =  $base_href;
+      }
+      $content[] = array( '#theme' => 'consultant_account_info', '#organization'  => $organization,  "#link_edit_org" => $edit_organization, "#description" => t(' Consultant lobbyist'));   
+      $content[] = array( '#theme' => 'consultant_activity', '#activity' => $activity_data, "#link_edit_act" => $edit_activity );  
+      if($editable){
+        $url = $base_url . \Drupal::config('biz_block_plugin.settings')->get('get_comments') ."?_format=json&id=" . $id;
+        $get_comments = BizWebformController::get_endpoint($url, [], "GET", []);
+        if($get_comments['code'] !== 400){           
+            $get_comments = json_decode($get_comments["message"]);
+            $title = '<div class="header-view purple-header">'
+            .   '<div class="col-xs-12 no-padding">'
+            .     '<p><strong>'.t('Your messages').'</strong></p>'
+            .   '</div>'
+            . '</div>';
+            $content[] = array('#type' => 'markup', '#markup' => $title);
+            
+            
+            if(!empty($get_comments) && is_array($get_comments)){
+              foreach($get_comments as $key => $comment){
+                $content[] = array( '#theme' => 'activity_messages', '#subject' => $comment->subject, "#user_name" => $comment->user_name , "#message" => $comment->comment_body, "#date" =>  $comment->changed);
+              }
+            }
+        }
+        $content[] = \Drupal::formBuilder()->getForm("Drupal\biz_activity_messages\Form\ActivityMessages");
+      } 
+      return $content;
+    }
   }
-  

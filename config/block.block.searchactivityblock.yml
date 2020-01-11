@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - biz_block_plugin
     - system
     - wxt_library
   theme:
@@ -11,7 +10,7 @@ dependencies:
 id: searchactivityblock
 theme: wxt_lobbyist
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: search_activity_custom_block
 settings:

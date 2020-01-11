@@ -4,8 +4,10 @@ module:
   admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
+  biz_activity_messages: 0
   biz_block_plugin: 0
   biz_iamlobbyist: 0
+  biz_lobbyist_permission: 0
   biz_lobbyist_registration: 0
   biz_webforms: 0
   block: 0
@@ -71,6 +73,7 @@ module:
   menu_ui: 0
   multiple_registration: 0
   node: 0
+  nodeaccess: 0
   options: 0
   page_cache: 0
   path: 0

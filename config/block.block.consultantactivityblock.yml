@@ -11,7 +11,7 @@ dependencies:
 id: consultantactivityblock
 theme: wxt_lobbyist
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: consultant_single_act_block
 settings:
@@ -22,7 +22,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/consultant-activity-view*'
+    pages: "/search-organization/organization-view/consultant-activity-view*\r\n/commissioner/consultant-activity-view*\r\n/consultant-account-home/consultant-activity-view"
     negate: false
     context_mapping: {  }
   panels_title:

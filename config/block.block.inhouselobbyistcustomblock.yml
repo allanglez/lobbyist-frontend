@@ -15,7 +15,7 @@ third_party_settings:
 id: inhouselobbyistcustomblock
 theme: wxt_lobbyist
 region: content
-weight: -11
+weight: -14
 provider: null
 plugin: inhouselobbyist_custom_block
 settings:

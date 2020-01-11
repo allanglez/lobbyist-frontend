@@ -7,11 +7,13 @@ global-styling:
       css/slick.css: {}
       css/lobbyist-finder.css: {}
       css/select2.min.css: {}
+      css/jquery.dataTables.css: {}
   js:    
     js/registration-modal.js: {}
     js/select2.full.min.js: {}
     js/webforms-helptexts.js: {}
     js/webforms-steps-confirm-check.js: {}
+    js/jquery.dataTables.min.js: {}
 fonts:
   css:
     theme:
@@ -23,7 +25,7 @@ fonts:
     # js/bootstrap/carousel.js: {}
     js/bootstrap/collapse.js: {}
     js/bootstrap/dropdown.js: {}
-    js/bootstrap/modal.js: {}
+#     js/bootstrap/modal.js: {}
     js/bootstrap/tooltip.js: {}
     js/bootstrap/popover.js: {}
     # js/bootstrap/scrollspy.js: {}

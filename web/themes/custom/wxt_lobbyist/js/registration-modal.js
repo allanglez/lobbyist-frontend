@@ -9,10 +9,13 @@ var waitForEl = function(selector, callback) {
   }
 };
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
+	
 	var selector = 'div:contains("You do not appear to be a lobbyist"):last';
 	var trigger_selector = '.ui-front.ui-dialog-content.ui-widget-content';
 	var page_selector = '.webform-submission-form'
+	var next_selector = '.webform-button--next';
+	var previous_selector = '.webform-button--previous';
 	
 	waitForEl(trigger_selector, function() {
 		$(trigger_selector).on('click', 'input', function(event) {
@@ -32,23 +35,35 @@ jQuery(document).ready(function($){
 				$(page_selector).children().first().attr('data-webform-key') != 'page_11'
 			) {
 				$('.js-form-wrapper .js-webform-webform-buttons').hide();
+				$(next_selector).hide();
 			} else {
-				$('.webform-button--next').click();
-			}
-			waitForEl(selector, function() {
+				$(next_selector).click();
+/*
+// 				
 				setTimeout(function() {
-				    if(($(selector).parent().attr('style') == "display: none;")) {
-					  $('.webform-button--next').show();
-				  	} else if (
-				  		$(selector).parent().parent().attr('data-webform-key') != 'page_1' &&
-				  		$(selector).parent().parent().attr('data-webform-key') != 'page_3' &&
-				  		$(selector).parent().parent().attr('data-webform-key') != 'page_5' &&
-				  		$(selector).parent().parent().attr('data-webform-key') != 'page_8'
+				    if (
+						$(page_selector).children().first().attr('data-webform-key') != 'page_0' &&
+				  		$(page_selector).children().first().attr('data-webform-key') != 'page_1' &&
+				  		$(page_selector).children().first().attr('data-webform-key') != 'page_3' &&
+				  		$(page_selector).children().first().attr('data-webform-key') != 'page_5' &&
+				  		$(page_selector).children().first().attr('data-webform-key') != 'page_8'
 				  	) {
-					  $('.webform-button--next').hide();
-				  	}
-				}, 180);
-			});
+					  $(next_selector).hide();
+				  	} else {
+					  $(next_selector).show();
+				  	} 
+				}, 1000);
+*/
+			}
+
+		});
+		$('.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix').on('click', 'button', function() {
+			console.log('clicked');
+		});
+		
+		$('.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix').on('click', function() {
+			console.log('next clicked');
 		});
 	});
+	
 });

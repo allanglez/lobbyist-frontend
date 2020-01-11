@@ -5,13 +5,14 @@ dependencies:
   module:
     - quicktabs
     - system
+    - user
     - wxt_library
   theme:
     - wxt_lobbyist
 id: quicktabsconsultantaccounthome
 theme: wxt_lobbyist
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: 'quicktabs_block:consultant_account_home'
 settings:
@@ -30,3 +31,10 @@ visibility:
     enabled: 0
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      consultant_lobbyist: consultant_lobbyist
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

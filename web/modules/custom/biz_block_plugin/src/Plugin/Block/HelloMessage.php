@@ -35,20 +35,23 @@
       $last_name = "";
       if(in_array('in_house_lobbyist', $roles)){
         $first_name = $user_entity->get('field_first_name')->getValue();
-        $first_name = $first_name[0]['value'];
+        $first_name = isset($first_name[0]) ? $first_name[0]['value'] : "";
         $last_name = $user_entity->get('field_last_name')->getValue();
-        $last_name = $last_name[0]['value'];
+        $last_name = isset($last_name[0]) ? $last_name[0]['value'] : "";
         $name = $first_name . ' ' . $last_name;
 
         $url = '/in-house-account-home';
       }elseif(in_array('consultant_lobbyist', $roles)){
         $first_name = $user_entity->get('field_first_name_consultant_')->getValue();
-        $first_name = $first_name[0]['value'];
+        $first_name = isset($first_name[0]) ?  $first_name[0]['value'] : "";
         $last_name = $user_entity->get('field_last_name_consultant_')->getValue();
-        $last_name = $last_name[0]['value'];
+        $last_name = isset($last_name[0]) ?  $last_name[0]['value'] : "";
         $name = $first_name . ' ' . $last_name;
 
         $url = '/consultant-account-home';
+      }elseif(in_array('role_administrator', $roles)){
+        $name = $user->getUsername();
+        $url = '/commissioner';
       }
       if(!empty($name)){
         $tag = '<a href='.$url.'>'.t('Hello').', '.$name.'</a>';

@@ -12,11 +12,19 @@ use Drupal\external_db_login\ExternalDBLoginService;
 * 
 */
 class BizWebformController {
+  
   /**
    * Execute the api
    */
-  
   static function get_endpoint($url, $data = array(), $method, $headers = array() ) {
+
+    if($method !== "GET" && empty($headers)){
+      $base_url = \Drupal::config('biz_lobbyist_registration.settings')->get('base_url');
+      $response = \Drupal::httpClient()->get(($base_url . '/rest/session/token'));
+      $csrf = (string) $response->getBody();
+      $headers =  array('X-CSRF-Token' => $csrf, "Content-Type" =>"application/json");
+    }
+    
     //Creating a httpClient Object.
     $client = \Drupal::httpClient();
     try {
@@ -104,7 +112,9 @@ class BizWebformController {
 	    biz_lobbyist_registration_goto("/in-house-account-home");
 	  } elseif (in_array("consultant_lobbyist", $roles)) {
 	    biz_lobbyist_registration_goto("/consultant-account-home");
-	  }
+	  }elseif(in_array("role_administrator", $roles)){
+      biz_lobbyist_registration_goto("/commissioner");
+    }
 	}
 	
 	function biz_lobbyist_registration_goto($path) { 

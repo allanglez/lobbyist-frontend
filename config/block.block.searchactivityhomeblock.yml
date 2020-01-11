@@ -11,7 +11,7 @@ dependencies:
 id: searchactivityhomeblock
 theme: wxt_lobbyist
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: search_activity_home_block
 settings:
@@ -27,6 +27,6 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: "<front>\r\n/consultant-registration\r\n/in-house-registration"
     negate: false
     context_mapping: {  }

@@ -7,8 +7,18 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Drupal\external_db_login\ExternalDBLoginService;
 use Drupal\biz_webforms\BizWebformController;
 use Drupal\webform\WebformSubmissionForm;
-// use Drupal\contact;
 
+
+function user_redirect($account){
+  $roles = $account->getRoles();
+  if(in_array("in_house_lobbyist", $roles)){
+    biz_lobbyist_registration_goto("/in-house-account-home");
+  }elseif(in_array("consultant_lobbyist", $roles)){
+    biz_lobbyist_registration_goto("/consultant-account-home");
+  }elseif(in_array("role_administrator", $roles)){
+    biz_lobbyist_registration_goto("/commissioner");
+  }
+}
 /**
  * Implements hook_local_tasks_alter().
  */
@@ -16,14 +26,14 @@ function biz_lobbyist_registration_local_tasks_alter(&$local_tasks) {
   unset($local_tasks['user.register']);
 }
 
-function biz_lobbyist_registration_user_login($account){
-  $roles = $account->getRoles();
-  if(in_array("in_house_lobbyist", $roles)){
-    biz_lobbyist_registration_goto("/in-house-account-home");
-  }elseif(in_array("consultant_lobbyist", $roles)){
-    biz_lobbyist_registration_goto("/consultant-account-home");
-  }
+function biz_lobbyist_registration_user_login($account) {
+  user_redirect($account);
+}
 
+function biz_lobbyist_registration_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityType()->id() == 'user') {
+//     user_redirect($entity);
+  }
 }
 
 /**
@@ -60,50 +70,33 @@ function biz_lobbyist_registration_menu_local_tasks_alter(&$data, $route_name) {
   }
 }
 
-//-----------------  MILESTONE 2----------------------------
 /**
  * Implements hook_form_alter().
  *  The actions are change only for validate and save the information in another server
  */
 function biz_lobbyist_registration_form_alter(&$form, $form_state, $form_id) {
-  if($form_id == "user_register_form"){
-    //unset($form['actions']['submit']['#submit'][0]);
-    //unset($form['actions']['submit']['#submit'][1]);
-    $form['actions']['submit']['#submit'][] = 'biz_lobbyist_registration_submitForm';
-    $form['#validate'][] = 'biz_lobbyist_registration_validate_email';
-  } 
+
+  switch($form_id){
+    case "user_register_form":
+      $form['actions']['submit']['#submit'][] = 'biz_lobbyist_registration_submitForm';
+      $form['#validate'][] = 'biz_lobbyist_registration_validate_email';
+    break;
+    case 'user_form':
+      $form['#prefix'] = '<div class="organization info-organization purple-header new-notifications-header"><div class="col-xs-12"><p><strong>Edit user</strong></p></div></div>';
+    break;
+  }
 }
 
 /**
  * Validate if the email address is already taken 
  */
 function biz_lobbyist_registration_validate_email($form, &$form_state){
-/*
-  $user_values123 = $form_state->getValues();
-  dsm($user_values123);
-  kint($user_values123);
-  die();
-  $rid = array("value" => $user_values123["rid"]);
-  kint($rid);
-*/
-  //WebformSubmissionForm::validateForm($form, $form_state);
-/*
-  $validation = validateForm(array $form, FormStateInterface $form_state);
-  kint($validation);
-  die();
-*/
-  
   $email = $form_state->getValue('mail');
   $url = \Drupal::config('biz_lobbyist_registration.settings')->get('validate_email_url_api'). "/".$email;
   $response = BizWebformController::get_endpoint($url, [], "GET", []);
   $data = json_decode($response["message"]);
-  
-  
-  
-  
-  
   if(!empty($data)){
-    $form_state->setErrorByName('email', t("The email address ".$email." is already taken."));
+    return FALSE;
   }
   //Save User
   $user_values = $form_state->getValues();
@@ -126,22 +119,20 @@ function biz_lobbyist_registration_validate_email($form, &$form_state){
   unset($user_values["rid"]);
   unset($user_values["timezone"]);
   unset($user_values["op"]);
-  $headers =  array('X-CSRF-Token' => "E6US4LWopfdmir8ugJftXOAbjW7brbr1eaZ2IcQRrwo", "Content-Type" =>"application/json");
-  //$user_values["roles"][0] = array("value" => $user_values["multiple_registration_rid"]);
-  $testarray["roles"][0] = $user_values["multiple_registration_rid"];
-  $testarray["roles"][1] = $user_values["roles"][0];
-  $user_values["roles"] = $testarray["roles"];
+  
+  $user_roles["roles"][0] = $user_values["multiple_registration_rid"];
+  $user_roles["roles"][1] = $user_values["roles"][0];
+  $user_values["roles"] = $user_roles["roles"];
   unset($user_values["multiple_registration_rid"]);
   unset($user_values["submit"]);
-  //$user_values["roles"] = array("value" => $user_values["roles"][0]);
   $user_values['field_street_address'] = $user_values["field_street_address"][0];
   $url = \Drupal::config('biz_lobbyist_registration.settings')->get('registration_url_api');
-  $response = BizWebformController::get_endpoint($url ,$user_values, "POST",  $headers );
+  $response = BizWebformController::get_endpoint($url ,$user_values, "POST",  [] );
 
   $data = json_decode($response["message"]);
   $user_name = "";
   if(!in_array($response["code"] , [201, 200]) ){
-    $form_state->setErrorByName('ApiError', t($response["message"]));
+    return FALSE;
   }
   else{
     $user = [];
@@ -149,48 +140,20 @@ function biz_lobbyist_registration_validate_email($form, &$form_state){
     $user['name'] = $data->name[0]->value;
     $user['mail'] = $data->mail[0]->value;
     $account = entity_create('user', $user);
-    if($testarray["roles"][0] == "in_house_lobbyist"){
+    if($user_roles["roles"][0] == "in_house_lobbyist"){
       _user_mail_notify('register_admin_created', $account, $data->langcode[0]->value); 
     }
-    else if($testarray["roles"][0] == "consultant_lobbyist") {
+    else if($user_roles["roles"][0] == "consultant_lobbyist") {
       _user_mail_notify('register_pending_approval', $account, $data->langcode[0]->value); 
     }
-    //'register_no_approval_required',
-    //in_house_lobbyist_welcome_mail
   }
+}
 
-}
-/**
- * Execute the api
- */
-/*
-function biz_lobbyist_registration_execute_api($url, $data = array(), $method, $headers = array() ) {
-  //Creating a httpClient Object.
-  $client = \Drupal::httpClient();
-  try {
-    $request_options = [];
-    if(!empty($headers)){
-      $request_options =  array('headers' => $headers);   
-    }
-    if(!empty($data)){
-      $request_options['json'] = $data;
-    }
-    $response = $client->$method($url, $request_options);
-    $ret =["code" => $response->getStatusCode(), "message" => $response->getBody()->getContents()];
-    return $ret;
-  }
-  catch (\Exception $e) {
-   if ($e->hasResponse()) {
-      $response = $e->getResponse()->getBody()->getContents();
-      return ["code" => 400, "message" => $response];
-    }
-  }
-}
-*/
 /**
  * If the account was created redirect to basic page
  */
 function biz_lobbyist_registration_submitForm(&$form, $form_state) {
+  \Drupal::logger('biz_lobbyist_registration')->notice('Start function');
   $user_values = $form_state->getValues();
   $field_first_name = $form_state->getValue('field_first_name');
   $field_first_name = $field_first_name[0]["value"];
@@ -206,10 +169,10 @@ function biz_lobbyist_registration_submitForm(&$form, $form_state) {
   }elseif(!empty($field_first_name_consultant_) && !empty($field_last_name_consultant_)){
     $user_name = $field_first_name_consultant_ . " ". $field_last_name_consultant_;
   }
-  
+  \Drupal::logger('biz_lobbyist_registration_submitForm')->notice($user_name);
   biz_lobbyist_registration_goto("account-register?name=". strtoupper($user_name));
+  \Drupal::logger('biz_lobbyist_registration_submitForm')->notice('End function');
 }
-
 function biz_lobbyist_registration_preprocess_page_title(&$variables) {
   $node = \Drupal::request()->attributes->get('node');
   $name = isset($_GET['name']) ? ", " . $_GET['name'] : "";
@@ -217,52 +180,26 @@ function biz_lobbyist_registration_preprocess_page_title(&$variables) {
     $variables['title'] = t($node->getTitle(). $name);
   }
 }
-
 function biz_lobbyist_registration_goto($path) { 
   $response = new RedirectResponse($path);
   $response->send();
   return;
 }
 
-function biz_lobbyist_registration_webform_submission_presave($submission){
+function biz_lobbyist_registration_webform_submission_presave($submission) {
   $email = $submission->getOwner()->getEmail();
-  BizWebformController::createConnection();
-  $connection = Database::getConnection();
-  $user_table = "users_field_data";
-  $email_field = "mail";
-  $password_field = "pass";
-  $user_data = $connection->select($user_table, 'u');
-  $user_data->fields('u', array('uid', 'pass'));
-  $user_data->condition($email_field, $email);
-  $user_result = $user_data->execute()->fetchObject();
-  $submission->setOwnerId($user_result->uid);
-  /*
-$webforms = ['add-a-lobbying-activity', 'add-a-lobbying-activity-consulta', 'add-an-in-house-lobbyust-to-your'];
-  var_dump($form_id);
-  if(in_array($form_id, $webforms)){
-    var_dump('ENTRO');
+  $base_url = \Drupal::config('biz_lobbyist_registration.settings')->get('base_url');
+  $enpoint = \Drupal::config('biz_lobbyist_registration.settings')->get('json_path');
+  $url = $base_url .$enpoint . \Drupal::currentUser()->getEmail();
+  $user = BizWebformController::get_endpoint($url, [], "GET", []);
+  $data = $submission->getData();
+  
+  if($user['code'] !== 400){
+    $user = isset(json_decode($user['message'])[0]) ? json_decode($user['message'])[0] : [];
   }
-*/
-}
-
-/*
-
-function externalCheckPassword($password, $hash, $user_id = '') {
-  // If the hash is still md5.
-  if (strlen($hash) <= 32) {
-    $hashpassword_obj = new PhpassHashedPassword();
-    $check = ($hash == md5($password));
-    if ($check && $user_id) {
-      // Rehash using new hash.
-      $hash = $hashpassword_obj->hash($password);
-    }
-    return $hashpassword_obj->check($password, $hash);
+  if(isset($user) && !empty($user)){
+    $submission->setOwnerId($user->uid);
+    $data['user_uid'] = $user->uid;
+    $submission->setData( $data);
   }
-
-  // If the stored hash is longer than an MD5, presume the
-  // new style phpass portable hash.
-  $hashpassword_obj = new PhpassHashedPassword(19);
-
-  return (int) $hashpassword_obj->check($password, $hash);
 }
-*/

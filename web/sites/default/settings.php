@@ -36,3 +36,13 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'wxt';
+$databases['backend']['default'] = [
+    'database' => 'pantheon',
+    'username' => 'pantheon',
+    'password' => '42ed5e132d444c1ba409bceafbf78a88',
+    'host' => 'dbserver.pr-14.1408e6b1-2c9d-41f7-aa9c-d0e0920cba1c.drush.in',
+    'port' => '15655',
+    'driver' => 'mysql',
+    'prefix' => '',
+    'collation' => 'utf8mb4_general_ci',
+  ];

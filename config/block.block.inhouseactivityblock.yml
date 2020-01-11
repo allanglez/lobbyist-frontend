@@ -11,7 +11,7 @@ dependencies:
 id: inhouseactivityblock
 theme: wxt_lobbyist
 region: content
-weight: -6
+weight: -9
 provider: null
 plugin: in-house_single_act_block
 settings:
@@ -27,6 +27,6 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: '/in-house-activity-view*'
+    pages: "/in-house-account-home/in-house-activity-view\r\n/commissioner/in-house-activity-view*\r\n/search-organization/organization-view/in-house-activity-view*"
     negate: false
     context_mapping: {  }

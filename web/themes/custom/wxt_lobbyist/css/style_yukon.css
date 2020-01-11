@@ -11222,7 +11222,6 @@ form div[data-drupal-messages]{
 }
 .webform-checkboxes-other .control-label,
 .radios--wrapper .control-label{
-  text-transform: uppercase;
   color: #4A4A4A;	
   font-family: Verdana;	
   font-size: 10px;
@@ -13429,7 +13428,10 @@ body .aurora--mini:before {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 .form-control,
+>>>>>>> master
 >>>>>>> master
 .input-group input {
   border-color: #ffcd57;
@@ -13459,15 +13461,21 @@ body .aurora--mini:before {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 /*
 .form-control.form-textarea {
   border: 1px solid #ccc;
 }
 */
+<<<<<<< HEAD
+=======
 =======
 .form-control.form-textarea {
   border: 1px solid #ccc;
 }
+>>>>>>> master
 >>>>>>> master
 
 #wb-srch form#search-form {
