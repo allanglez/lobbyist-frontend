@@ -1,0 +1,8 @@
+uuid: 6e77b24c-6cad-4b64-87dc-b3a3f1cbecdc
+langcode: en
+status: true
+dependencies: {  }
+id: activiy_comments
+label: 'Activiy comments'
+target_entity_type_id: lobbyist_activity
+description: ''

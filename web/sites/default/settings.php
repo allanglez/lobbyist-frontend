@@ -3,6 +3,7 @@
 /**
  * Load services definition file.
  */
+ini_set('max_execution_time', 0);
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**
@@ -36,3 +37,4 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'wxt';
+$settings['simple_oauth.key_permissions_check'] = FALSE;

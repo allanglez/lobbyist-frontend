@@ -1,0 +1,16 @@
+uuid: 3a82b7e4-50cd-4394-842d-38f4e3d2a0bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: role_administrator
+label: 'Role administrator'
+weight: 5
+is_admin: null
+permissions:
+  - 'access webform submission log'
+  - 'edit own comments'

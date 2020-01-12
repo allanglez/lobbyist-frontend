@@ -1,9 +1,12 @@
+uuid: 11c71b8b-e4e3-4d69-9283-df1a4469a032
 langcode: en
 status: open
 dependencies:
   enforced:
     module:
       - webform
+_core:
+  default_config_hash: CjLyKc08W5pQDmtIk0iDWmit1eCAlCVJtOzxMdHI51Q
 open: null
 close: null
 weight: 0
@@ -14,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nmessage_2:\n  '#type': text_format\n  '#title': Message\n  '#allowed_formats':\n    basic_html: basic_html\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
 css: ''
 javascript: ''
 settings:
@@ -247,6 +250,3 @@ handlers:
       sender_name: ''
       theme_name: ''
       parameters: {  }
-uuid: 11c71b8b-e4e3-4d69-9283-df1a4469a032
-_core:
-  default_config_hash: CjLyKc08W5pQDmtIk0iDWmit1eCAlCVJtOzxMdHI51Q

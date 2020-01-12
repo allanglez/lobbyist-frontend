@@ -1,0 +1,11 @@
+uuid: 42eadea2-9243-4578-adce-6cd22d44c7f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.activiy_comments
+id: comment.activiy_comments
+target_entity_type_id: comment
+target_bundle: activiy_comments
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,10 @@
+uuid: c110d38d-4d11-4667-b527-1fd6f1671ef8
+langcode: en
+status: true
+dependencies: {  }
+id: lobbyist_activity
+label: 'Lobbyist activity'
+created: true
+changed: true
+uid: true
+title: true

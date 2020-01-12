@@ -1,0 +1,20 @@
+uuid: 50038bf8-023e-4b70-9f23-ef4d7df06f92
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - eck
+id: lobbyist_activity.field_comments
+field_name: field_comments
+entity_type: lobbyist_activity
+type: comment
+settings:
+  comment_type: activiy_comments
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

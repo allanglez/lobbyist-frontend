@@ -1,0 +1,11 @@
+uuid: dd59e6b4-b335-48b6-a463-36ef80772f87
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.header_for_in_house_lobbyist_
+id: taxonomy_term.header_for_in_house_lobbyist_
+target_entity_type_id: taxonomy_term
+target_bundle: header_for_in_house_lobbyist_
+default_langcode: site_default
+language_alterable: false
