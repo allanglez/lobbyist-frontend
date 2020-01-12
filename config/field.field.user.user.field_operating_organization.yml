@@ -12,17 +12,19 @@ third_party_settings:
     user_additional_register_form:
       in_house_lobbyist: in_house_lobbyist
       authenticated: 0
+      consultant_lobbyist: 0
     user_additional_register_form_required:
       in_house_lobbyist: in_house_lobbyist
       authenticated: 0
+      consultant_lobbyist: 0
 id: user.user.field_operating_organization
 field_name: field_operating_organization
 entity_type: user
 bundle: user
 label: 'Operating Organization'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

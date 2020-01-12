@@ -25,7 +25,7 @@ bundle: user
 label: 'STREET ADDRESS'
 description: 'WHAT IS YOUR MAILING ADDRESS?'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

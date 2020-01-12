@@ -24,7 +24,7 @@ bundle: user
 label: 'BUSINESS NAME'
 description: 'BUSINESS NAME (IF APPLICABLE)'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

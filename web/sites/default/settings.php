@@ -3,6 +3,7 @@
 /**
  * Load services definition file.
  */
+ini_set('max_execution_time', 0);
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**

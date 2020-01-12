@@ -1,0 +1,8 @@
+uuid: 6fd94da3-e0e7-440b-a336-bc7d09286ac3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Header for Organizations'
+vid: header_for_organizations_
+description: ''
+weight: 0

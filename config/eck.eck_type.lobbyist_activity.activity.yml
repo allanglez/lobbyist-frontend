@@ -1,0 +1,9 @@
+uuid: d773d218-4b27-41c5-810e-1cb44115dd7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.lobbyist_activity
+name: Activity
+type: activity
+description: ''

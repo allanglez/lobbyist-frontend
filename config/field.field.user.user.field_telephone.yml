@@ -7,7 +7,6 @@ dependencies:
   module:
     - multiple_registration
     - telephone
-    - telephone_validation
     - user
 third_party_settings:
   multiple_registration:
@@ -15,19 +14,18 @@ third_party_settings:
       in_house_lobbyist: in_house_lobbyist
       consultant_lobbyist: consultant_lobbyist
       authenticated: 0
-    user_additional_register_form_required: null
-  telephone_validation:
-    format: 2
-    country:
-      - CA
+    user_additional_register_form_required:
+      in_house_lobbyist: in_house_lobbyist
+      consultant_lobbyist: consultant_lobbyist
+      authenticated: 0
 id: user.user.field_telephone
 field_name: field_telephone
 entity_type: user
 bundle: user
 label: TELEPHONE
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

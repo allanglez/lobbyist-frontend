@@ -1,0 +1,8 @@
+uuid: 0969042c-c6af-4c64-878b-98dd5a194572
+langcode: en
+status: true
+dependencies: {  }
+name: 'Header for all activities'
+vid: header_for_all_activities
+description: ''
+weight: 0
